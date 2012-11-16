@@ -1,0 +1,137 @@
+// ==========================================================
+
+// 320 and Up by Andy Clarke
+// Version: 3.0
+// URL: http://stuffandnonsense.co.uk/projects/320andup/
+// Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+
+// ==========================================================
+
+/* Page =================================================== */
+
+// 1. ROOT 					==============================
+
+html {
+background : @bodycolor; 
+font-size : 62.5%;
+-webkit-overflow-scrolling : touch; 
+-webkit-tap-highlight-color : lighten(@basecolor, 75%); 
+-webkit-text-size-adjust : 100%; 
+-ms-text-size-adjust : 100%; }
+
+body { 
+margin : 0;
+padding : 0;
+width : 100%;
+background-color : transparent;
+font-family : @basefont;
+.font-size();
+line-height : @baselineheight;
+color : @textcolor; }
+
+// 2. TYPOGRAPHY 			==============================
+// 3. COLOUR 				==============================
+// 4. TEXTURE 				==============================
+// 5. ELEMENTS 				==============================
+
+header {
+	background-color: black;
+	color: white;
+	padding: 6.25%;
+	position: relative;
+	
+	#icons {
+		float: left;
+		width: 24px;
+		margin-right: 5.8824%;
+		
+		a {
+			display: block;
+			width: 24px;
+			height: 23px;
+			margin-bottom: 10px;
+		}
+		#icon-search {
+			background: transparent url(../images/icon_search.png) top left no-repeat;
+		}
+		#icon-search:hover,
+		#icon-search:active,
+		#icon-search:focus {
+			background-position: 0 -23px;
+		}
+		#icon-home {
+			background: transparent url(../images/icon_home.png) top left no-repeat;
+		}
+		#icon-home:hover,
+		#icon-home:active,
+		#icon-home:focus {
+			background-position: 0 -23px;
+		}
+	}
+	
+	#contact {
+		float: left;
+	}
+	
+	#ident-wrapper {
+		position: absolute;
+		top: -47px;
+		right: 50px;
+		width: 136px;
+		height: 136px;
+		background: white; 
+		-moz-border-radius: 68px;
+		-webkit-border-radius: 68px; 
+		border-radius: 68px;
+		overflow: hidden;
+		
+		#ident-top,
+		#ident-bottom {
+			text-align: center;
+			position: relative;
+		}
+		#ident-top {
+			margin-top: 12px;
+			height: 50px;
+			
+			span {
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+			}
+		}
+		#ident-bottom {
+			padding: 5px 10px;
+		}
+		
+	}	
+	
+	#main-nav {
+		clear: both;
+	}
+	
+}
+
+footer {
+	background-color: black;
+	color: white;
+	padding: 6.25%;
+	text-align: right;
+
+	.logo {
+		margin: 15px 0;
+	}
+}
+
+// 6. LAYOUT 				==============================
+
+#layout {
+	width: 100%;
+	max-width: 569px;
+	margin: 0 auto;
+}
+
+// 7. VENDOR-SPECIFIC 		==============================
+// 8. MODERNIZR 			==============================
+// 9. TEMPLATE SPECIFICS 	==============================
