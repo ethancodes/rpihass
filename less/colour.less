@@ -22,12 +22,23 @@ header {
 		background: white url(../images/bg_ident.png) 0 47px repeat-x;
 	}
 	#ident-wrapper #ident-top {
-//		background-color: @rpired;
 		color: white;
 	}
 	#ident-wrapper #ident-bottom {
-//		background-color: white;
 		color: @rpigray;
+	}
+	
+	#main-nav ul li.active {
+		background: transparent url(../images/red_arrow.png) 0 8px no-repeat;
+		
+		ul li {
+			background-image: none;
+		}
+		
+		ul li.active {
+			background-image: url(../images/red_dot.png);
+			background-position: 0 4px;
+		}
 	}
 	
 }

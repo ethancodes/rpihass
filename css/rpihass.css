@@ -171,7 +171,7 @@ header #contact {
 header #ident-wrapper {
   position: absolute;
   top: -47px;
-  right: 50px;
+  right: 6.25%;
   width: 136px;
   height: 136px;
   background: white;
@@ -200,6 +200,7 @@ header #ident-wrapper #ident-bottom {
 }
 header #main-nav {
   clear: both;
+  padding-top: 18px;
 }
 footer {
   background-color: black;
@@ -339,6 +340,10 @@ sup {
 sub {
   bottom: -0.25em;
 }
+header {
+  /* main navigation */
+
+}
 header #contact a {
   text-transform: uppercase;
   font-size: 9px;
@@ -352,6 +357,66 @@ header #ident-wrapper #ident-top {
 header #ident-wrapper #ident-bottom {
   font-size: 15px;
   line-height: 16px;
+}
+header #main-nav ul {
+  margin: 0 11px 0 -11px;
+  padding: 0;
+}
+header #main-nav ul li {
+  list-style-type: none;
+  color: white;
+  font-size: 13px;
+  line-height: 24px;
+  margin: 0 0 3px 0;
+  padding: 0 0 0 14px;
+}
+header #main-nav ul li a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 24px;
+}
+header #main-nav ul li ul {
+  margin: 0;
+  padding-left: 6px;
+  display: none;
+}
+header #main-nav ul li ul li {
+  font-size: 10px;
+  line-height: 12px;
+  margin: 8px 0;
+  padding: 0;
+}
+header #main-nav ul li ul li a {
+  text-transform: none;
+  font-size: 10px;
+  line-height: 12px;
+}
+header #main-nav ul li.active,
+header #main-nav ul li.active ul li {
+  padding-left: 14px;
+}
+header #main-nav ul li.active ul {
+  display: block;
+}
+header #main-nav ul li.active ul li ul {
+  display: none;
+}
+header #main-nav ul li.active ul li.active ul {
+  display: block;
+}
+header #main-nav ul .menu-action {
+  color: #f4e71a;
+  font-weight: bold;
+  margin-left: 10px;
+  font-size: 20px;
+  line-height: 1em;
+}
+header #main-nav ul ul .menu-action {
+  margin-left: 7px;
+  font-size: 16px;
+  line-height: 12px;
 }
 footer p {
   margin: 0;
@@ -388,6 +453,16 @@ header #ident-wrapper #ident-top {
 }
 header #ident-wrapper #ident-bottom {
   color: #414042;
+}
+header #main-nav ul li.active {
+  background: transparent url(../images/red_arrow.png) 0 8px no-repeat;
+}
+header #main-nav ul li.active ul li {
+  background-image: none;
+}
+header #main-nav ul li.active ul li.active {
+  background-image: url(../images/red_dot.png);
+  background-position: 0 4px;
 }
 footer a {
   color: #f7001f;

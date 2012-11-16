@@ -159,6 +159,81 @@ header {
 			line-height: 16px;
 		}
 	}
+	
+	/* main navigation */
+	#main-nav {
+		ul {
+			margin: 0 11px 0 -11px;
+			padding: 0;
+		}
+		ul li {
+			list-style-type: none;
+			color: white;
+			font-size: 13px;
+			line-height: 24px;
+			margin: 0 0 3px 0;
+			padding: 0 0 0 14px;
+			
+			a {
+				color: white;
+				text-decoration: none;
+				text-transform: uppercase;
+				font-size: 13px;
+				line-height: 24px;
+			}
+			
+			ul {
+				margin: 0;
+				padding-left: 6px;
+				display: none;
+			}
+			
+			ul li {
+				font-size: 10px;
+				line-height: 12px;
+				margin: 8px 0;
+				padding: 0;
+			
+				a {
+					text-transform: none;
+					font-size: 10px;
+					line-height: 12px;
+				}
+			}
+		}
+
+		ul li.active,
+		ul li.active ul li {
+			padding-left: 14px;
+		}
+		
+		ul li.active ul {
+			display: block;
+			
+			li ul {
+				display: none;
+			}
+			
+			li.active ul {
+				display: block;
+			}
+			
+		}
+	}
+	
+	#main-nav ul .menu-action {
+		color: @rpiyellow;
+		font-weight: bold;
+		margin-left: 10px;
+		font-size: 20px;
+		line-height: 1em;		
+	}
+	#main-nav ul ul .menu-action {
+		margin-left: 7px;
+		font-size: 16px;
+		line-height: 12px;
+	}
+	
 }
 
 
