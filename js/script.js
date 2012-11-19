@@ -33,5 +33,32 @@ $(document).ready(function() {
 			$(this).addClass("menu-open");
 		}
 	});
+	
+	
+	// circle things, if your browser supports that
+	if ($('html').hasClass('borderradius')) {
+		
+		// so far this works for img and div, haven't tried anything else.
+		$('.circle').each(function() {
+
+			var h = $(this).outerHeight();
+			var w = $(this).outerWidth();			
+			var m = Math.min(h, w);
+			var css = 'overflow: hidden; ';
+			css += 'width: ' + m.toString() + 'px; ';
+			css += 'height: ' + m.toString() + 'px; ';
+			css += '-moz-border-radius: ' + (m / 2).toString() + 'px; ';
+			css += '-webkit-border-radius: ' + (m / 2).toString() + 'px; ';
+			css += 'border-radius: ' + (m / 2).toString() + 'px; ';			
+			var offset = (w / 2) - (m / 2);
+			
+			$(this).css('max-width', w.toString() + 'px').css('margin-left', '-' + offset.toString() + 'px');
+			$(this).wrap('<div class="circle-wrapper" style="' + css + '"></div>');
+		
+		});
+
+	}
 
 });
+
+

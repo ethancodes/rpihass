@@ -192,14 +192,48 @@ header #main-nav {
 #page-content-container {
   padding: 3% 6.25%;
 }
+#page-content-container h1 {
+  clear: both;
+}
 /*
  * STUDENT PROFILE
  */
+.anchor-wrapper {
+  margin-bottom: 3em;
+  border-bottom: 1px dotted #939598;
+  padding-bottom: 1em;
+  height: 133px;
+}
+.anchor-wrapper .anchor-block .anchor-left {
+  float: left;
+  width: 50%;
+}
+.anchor-wrapper .anchor-block .anchor-right {
+  float: right;
+  width: 50%;
+}
+.anchor-wrapper .anchor-block .anchor-right .anchor-text {
+  height: 73px;
+  width: 200px;
+  float: right;
+}
+.anchor-wrapper .anchor-block .anchor-right .circle-wrapper {
+  float: right;
+}
+.anchor-wrapper .anchor-block .anchor-right .circle-wrapper .anchor-text {
+  float: none;
+}
 #student-profile-container {
   clear: both;
   margin-top: 3em;
   border-top: 1px dotted #939598;
   padding-top: 1em;
+}
+#student-profile-container #student-profile-image {
+  text-align: center;
+}
+#student-profile-container #student-profile-image .circle-wrapper {
+  margin: 0 auto;
 }
 /*
  * FOOTER
@@ -472,6 +506,13 @@ header #main-nav ul ul .menu-action {
 /*
  * STUDENT PROFILE
  */
+.anchor-block .anchor-text {
+  text-align: center;
+  font-size: 17px;
+  line-height: 19px;
+  font-weight: bold;
+  padding-top: 60px;
+}
 #student-profile-text h4 {
   font-size: 17px;
   line-height: 19px;
@@ -557,6 +598,16 @@ header #main-nav ul li.active ul li.active {
  */
 #page-content-container {
   background-color: #e7e8e9;
+}
+#page-content-container .anchor-block .anchor-text {
+  background-color: black;
+  color: #f4e71a;
+}
+#page-content-container .anchor-block .anchor-text a {
+  color: #f4e71a;
+}
+#page-content-container .anchor-block .anchor-text a:hover {
+  color: white;
 }
 /*
  * FOOTER

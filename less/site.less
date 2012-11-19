@@ -34,6 +34,7 @@ color : @textcolor; }
 // 4. TEXTURE 				==============================
 // 5. ELEMENTS 				==============================
 
+
 header {
 	background-color: black;
 	color: white;
@@ -106,16 +107,63 @@ header {
  */
 #page-content-container {
 	padding: 3% 6.25%;
+	
+	h1 {
+		clear: both;
+	}
+	
 }
 
 /*
  * STUDENT PROFILE
  */
+ 
+.anchor-wrapper {
+
+	margin-bottom: 3em;
+	border-bottom: 1px dotted #939598;
+	padding-bottom: 1em;
+	height: 133px;
+	
+	.anchor-block {
+		.anchor-left {
+			float: left;
+			width: 50%;
+		}
+		.anchor-right {
+			float: right;
+			width: 50%;
+			
+			.anchor-text {
+				height: 73px;
+				width: 200px;
+				float: right;
+			}
+			.circle-wrapper {
+				float: right;
+				.anchor-text {
+					float: none;
+				}
+			}
+		}
+	}
+	
+}
+ 
 #student-profile-container {
 	clear: both;
 	margin-top: 3em;
 	border-top: 1px dotted #939598;
 	padding-top: 1em;
+	
+	#student-profile-image {
+		text-align: center;
+		
+		.circle-wrapper {
+			margin: 0 auto;			
+		}
+	}
+	
 }
 
 
