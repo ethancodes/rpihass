@@ -11,6 +11,25 @@
 
 header {
 
+	// search and home icons
+	#icon-search {
+		background: transparent url(../images/icon_search.png) top left no-repeat;
+	}
+	#icon-search:hover,
+	#icon-search:active,
+	#icon-search:focus {
+		background-position: 0 -23px;
+	}
+	#icon-home {
+		background: transparent url(../images/icon_home.png) top left no-repeat;
+	}
+	#icon-home:hover,
+	#icon-home:active,
+	#icon-home:focus {
+		background-position: 0 -23px;
+	}
+
+	// contact
 	#contact a {
 		color: @rpiyellow;
 	}
@@ -18,6 +37,7 @@ header {
 		color: white;
 	}
 
+	// big ident circle
 	#ident-wrapper {
 		background: white url(../images/bg_ident.png) 0 47px repeat-x;
 	}
@@ -28,6 +48,7 @@ header {
 		color: @rpigray;
 	}
 	
+	// main navigation
 	#main-nav ul li.active {
 		background: transparent url(../images/red_arrow.png) 0 8px no-repeat;
 		
@@ -42,6 +63,23 @@ header {
 	}
 	
 }
+
+
+
+
+/*
+ * MAIN BODY STUFF
+ */
+#page-content-container {
+	background-color: #e7e8e9;
+}
+
+
+
+
+/*
+ * FOOTER
+ */
 
 footer a {
 	color: @rpired;

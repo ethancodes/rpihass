@@ -135,7 +135,7 @@ body {
 header {
   background-color: black;
   color: white;
-  padding: 6.25%;
+  padding: 3% 6.25%;
   position: relative;
 }
 header #icons {
@@ -148,22 +148,6 @@ header #icons a {
   width: 24px;
   height: 23px;
   margin-bottom: 10px;
-}
-header #icons #icon-search {
-  background: transparent url(../images/icon_search.png) top left no-repeat;
-}
-header #icons #icon-search:hover,
-header #icons #icon-search:active,
-header #icons #icon-search:focus {
-  background-position: 0 -23px;
-}
-header #icons #icon-home {
-  background: transparent url(../images/icon_home.png) top left no-repeat;
-}
-header #icons #icon-home:hover,
-header #icons #icon-home:active,
-header #icons #icon-home:focus {
-  background-position: 0 -23px;
 }
 header #contact {
   float: left;
@@ -202,6 +186,24 @@ header #main-nav {
   clear: both;
   padding-top: 18px;
 }
+/*
+ * MAIN BODY STUFF
+ */
+#page-content-container {
+  padding: 3% 6.25%;
+}
+/*
+ * STUDENT PROFILE
+ */
+#student-profile-container {
+  clear: both;
+  margin-top: 3em;
+  border-top: 1px dotted #939598;
+  padding-top: 1em;
+}
+/*
+ * FOOTER
+ */
 footer {
   background-color: black;
   color: white;
@@ -418,6 +420,76 @@ header #main-nav ul ul .menu-action {
   font-size: 16px;
   line-height: 12px;
 }
+/*
+ * MAIN PAGE
+ */
+#page-content-container h1 {
+  font-size: 26px;
+  line-height: 30px;
+  color: #414042;
+}
+#page-content-container h4 {
+  font-size: 16px;
+  line-height: 20px;
+}
+#page-content-container .highlight {
+  font-weight: bold;
+  color: #5f1ff2;
+}
+#page-content-container p {
+  font-size: 12px;
+  line-height: 18px;
+  margin: 1em 0;
+}
+#page-content-container p.highlight {
+  font-size: 14px;
+  line-height: 22px;
+}
+#page-content-container ul,
+#page-content-container ol {
+  margin-left: 0;
+  padding-left: 3.125%;
+}
+#page-content-container ul li,
+#page-content-container ol li {
+  font-size: 12px;
+  line-height: 18px;
+}
+#page-content-container a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 18px;
+  color: #f7001f;
+}
+#page-content-container a.call-to-action {
+  font-size: 16px;
+  line-height: 20px;
+}
+#page-content-container a:hover {
+  color: #414042;
+}
+/*
+ * STUDENT PROFILE
+ */
+#student-profile-text h4 {
+  font-size: 17px;
+  line-height: 19px;
+  font-weight: bold;
+  color: #5f1ff2;
+}
+#student-profile-text p {
+  margin-top: 0;
+}
+#student-profile-text blockquote {
+  font-style: italic;
+  font-weight: bold;
+  color: #5f1ff2;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/*
+ * FOOTER
+ */
 footer p {
   margin: 0;
   font-size: 12px;
@@ -439,6 +511,22 @@ footer a {
   line-height: 18px;
 }
 /* Colour =================================================== */
+header #icon-search {
+  background: transparent url(../images/icon_search.png) top left no-repeat;
+}
+header #icon-search:hover,
+header #icon-search:active,
+header #icon-search:focus {
+  background-position: 0 -23px;
+}
+header #icon-home {
+  background: transparent url(../images/icon_home.png) top left no-repeat;
+}
+header #icon-home:hover,
+header #icon-home:active,
+header #icon-home:focus {
+  background-position: 0 -23px;
+}
 header #contact a {
   color: #f4e71a;
 }
@@ -464,6 +552,15 @@ header #main-nav ul li.active ul li.active {
   background-image: url(../images/red_dot.png);
   background-position: 0 4px;
 }
+/*
+ * MAIN BODY STUFF
+ */
+#page-content-container {
+  background-color: #e7e8e9;
+}
+/*
+ * FOOTER
+ */
 footer a {
   color: #f7001f;
 }

@@ -29,7 +29,7 @@ $(document).ready(function() {
 		} else {
 			// currently closed, open
 			$(this).siblings("ul").slideDown();
-			$(this).html("-");
+			$(this).html("&mdash;");
 			$(this).addClass("menu-open");
 		}
 	});
