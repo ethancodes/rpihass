@@ -9,6 +9,25 @@
 
 /* Typography =================================================== */
 
+
+// FONT FACE http://www.font-face.com
+
+@font-face {
+  font-family: Gotham Book;
+  src: url(../fonts/Gotham/Gotham-Book.otf) format("opentype");
+}
+
+@font-face {
+  font-family: Gotham Rounded Medium;
+  src: url(../fonts/GothamRounded/GothamRounded-Medium.otf) format("opentype");
+}
+
+@font-face {
+  font-family: Gotham Rounded Book;
+  src: url(../fonts/GothamRounded/GothamRounded-Book.otf) format("opentype");
+}
+
+
 // HEADINGS ====================================================
 
 h1, 
@@ -53,7 +72,6 @@ margin : 0;
 blockquote  { 
 margin : 0 0 @baselineheight -@gutterwidth; 
 padding-left : @gutterwidth; 
-border-left : 2px solid @bordercolor;
 font-family : @altfont;
 font-style : normal; }
 
@@ -153,10 +171,12 @@ header {
 			text-transform: uppercase;
 			font-size: 12px;
 			line-height: 1em;
+			font-weight: bold;
 		}
 		#ident-bottom {
 			font-size: 15px;
 			line-height: 16px;
+			font-family: "Gotham Rounded Medium", "Gotham Book", "Helvetica Neue", Helvetica, sans-serif;
 		}
 	}
 	
@@ -323,9 +343,8 @@ header {
 	
 	blockquote {
 		font-style: italic;
-		font-weight: bold;
 		color: @rpipurple;
-		font-family: @basefont;
+		font-family: "Gotham Rounded Medium", "Gotham Book", "Helvetica Neue", Helvetica, sans-serif;
 	}
 }
 

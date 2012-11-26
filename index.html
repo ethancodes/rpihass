@@ -18,6 +18,11 @@ a {
 hr {
 	margin: 10px 20px;
 }
+pre {
+	border: 1px solid #a0a0a0;
+	background: #d0d0d0;
+	padding: 2em;
+}
 </style>
 </head>
 <body>
@@ -25,11 +30,7 @@ hr {
 <div id="layout">
 
 	<h1>RPI HASS</h1>
-	
-	<p>
-		<em>There will be some introductory documentation here.</em>
-	</p>
-	
+		
 	<p>
 		We're building templates for 6 pages.
 		These page templates are "responsive," meaning that the appearance we change based on width of the device, whether it's a massive desktop computer, a tablet, or a phone.
@@ -37,6 +38,18 @@ hr {
 		We're using <a href="http://stuffandnonsense.co.uk/projects/320andup/">320 and Up</a>.
 		You should be familiar with HTML(5), CSS/LESS, and jQuery.
 	</p>
+
+	<p>
+		<strong>Fonts.</strong> We're using "Gotham" and "Gotham Rounded." We're using <a href="http://www.font-face.com/">@font-face</a> to display them, which is currently defined in typography.less.
+		In order to prevent people from "stealing" or linking directly to the font files, the following should be added to .htaccess or something similar.
+	</p>
+	
+	<pre>&lt;FilesMatch "\.(ttf|otf)$"&gt;
+&lt;IfModule mod_headers.c&gt;
+Header set Access-Control-Allow-Origin "*"
+&lt;/IfModule&gt;
+&lt;/FilesMatch&gt;</pre>	
+
 		
 	<hr />
 	

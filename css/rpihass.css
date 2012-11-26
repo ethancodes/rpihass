@@ -126,7 +126,7 @@ body {
   padding: 0;
   width: 100%;
   background-color: transparent;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Gotham Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-size: 1.6rem;
   line-height: 1.5em;
@@ -253,6 +253,18 @@ footer .logo {
   margin: 0 auto;
 }
 /* Typography =================================================== */
+@font-face {
+  font-family: Gotham Book;
+  src: url(../fonts/Gotham/Gotham-Book.otf) format("opentype");
+}
+@font-face {
+  font-family: Gotham Rounded Medium;
+  src: url(../fonts/GothamRounded/GothamRounded-Medium.otf) format("opentype");
+}
+@font-face {
+  font-family: Gotham Rounded Book;
+  src: url(../fonts/GothamRounded/GothamRounded-Book.otf) format("opentype");
+}
 h1,
 h2,
 h3,
@@ -260,7 +272,7 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-family: inherit;
+  font-family: "Gotham Rounded Book", inherit;
   font-weight: bold;
   color: inherit;
   text-rendering: optimizelegibility;
@@ -293,7 +305,6 @@ li ol {
 blockquote {
   margin: 0 0 1.5em -6.25%;
   padding-left: 6.25%;
-  border-left: 2px solid #c7ced6;
   font-family: Cambria, Georgia, Times, "Times New Roman";
   font-style: normal;
 }
@@ -389,10 +400,12 @@ header #ident-wrapper #ident-top {
   text-transform: uppercase;
   font-size: 12px;
   line-height: 1em;
+  font-weight: bold;
 }
 header #ident-wrapper #ident-bottom {
   font-size: 15px;
   line-height: 16px;
+  font-family: "Gotham Rounded Medium", "Gotham Book", "Helvetica Neue", Helvetica, sans-serif;
 }
 header #main-nav ul {
   margin: 0 11px 0 -11px;
@@ -524,9 +537,8 @@ header #main-nav ul ul .menu-action {
 }
 #student-profile-text blockquote {
   font-style: italic;
-  font-weight: bold;
   color: #5f1ff2;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Gotham Rounded Medium", "Gotham Book", "Helvetica Neue", Helvetica, sans-serif;
 }
 /*
  * FOOTER
@@ -712,7 +724,7 @@ input,
 button,
 select,
 textarea {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Gotham Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
