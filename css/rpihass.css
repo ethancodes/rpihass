@@ -126,7 +126,7 @@ body {
   padding: 0;
   width: 100%;
   background-color: transparent;
-  font-family: "Gotham Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-size: 1.6rem;
   line-height: 1.5em;
@@ -198,30 +198,35 @@ header #main-nav {
 /*
  * STUDENT PROFILE
  */
-.anchor-wrapper {
+#page-content-container .anchor-wrapper {
   margin-bottom: 3em;
   border-bottom: 1px dotted #939598;
   padding-bottom: 1em;
   height: 133px;
 }
-.anchor-wrapper .anchor-block .anchor-left {
+#page-content-container .anchor-wrapper .anchor-block .anchor-left {
   float: left;
   width: 50%;
 }
-.anchor-wrapper .anchor-block .anchor-right {
+#page-content-container .anchor-wrapper .anchor-block .anchor-right {
   float: right;
   width: 50%;
 }
-.anchor-wrapper .anchor-block .anchor-right .anchor-text {
+#page-content-container .anchor-wrapper .anchor-block .anchor-right .anchor-text {
   height: 73px;
   width: 200px;
   float: right;
 }
-.anchor-wrapper .anchor-block .anchor-right .circle-wrapper {
+#page-content-container .anchor-wrapper .anchor-block .anchor-right .circle-wrapper {
   float: right;
 }
-.anchor-wrapper .anchor-block .anchor-right .circle-wrapper .anchor-text {
+#page-content-container .anchor-wrapper .anchor-block .anchor-right .circle-wrapper .anchor-text {
   float: none;
+  height: 100%;
+}
+#page-content-container .anchor-wrapper .anchor-block .anchor-right .circle-wrapper .link-words-2,
+#page-content-container .anchor-wrapper .anchor-block .anchor-right .circle-wrapper .link-words-2 a {
+  padding-top: 50px;
 }
 #student-profile-container {
   clear: both;
@@ -253,18 +258,22 @@ footer .logo {
   margin: 0 auto;
 }
 /* Typography =================================================== */
+/*
 @font-face {
   font-family: Gotham Book;
   src: url(../fonts/Gotham/Gotham-Book.otf) format("opentype");
 }
+
 @font-face {
   font-family: Gotham Rounded Medium;
   src: url(../fonts/GothamRounded/GothamRounded-Medium.otf) format("opentype");
 }
+
 @font-face {
   font-family: Gotham Rounded Book;
   src: url(../fonts/GothamRounded/GothamRounded-Book.otf) format("opentype");
 }
+*/
 h1,
 h2,
 h3,
@@ -272,8 +281,8 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-family: "Gotham Rounded Book", inherit;
-  font-weight: bold;
+  font-family: "proxima-nova-soft", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
   color: inherit;
   text-rendering: optimizelegibility;
 }
@@ -305,7 +314,7 @@ li ol {
 blockquote {
   margin: 0 0 1.5em -6.25%;
   padding-left: 6.25%;
-  font-family: Cambria, Georgia, Times, "Times New Roman";
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
 }
 q {
@@ -405,7 +414,8 @@ header #ident-wrapper #ident-top {
 header #ident-wrapper #ident-bottom {
   font-size: 15px;
   line-height: 16px;
-  font-family: "Gotham Rounded Medium", "Gotham Book", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
 }
 header #main-nav ul {
   margin: 0 11px 0 -11px;
@@ -478,18 +488,21 @@ header #main-nav ul ul .menu-action {
 #page-content-container h4 {
   font-size: 16px;
   line-height: 20px;
+  color: #414042;
+  font-weight: bold;
 }
 #page-content-container .highlight {
   font-weight: bold;
   color: #5f1ff2;
 }
 #page-content-container p {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 18px;
   margin: 1em 0;
+  color: #414042;
 }
 #page-content-container p.highlight {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 22px;
 }
 #page-content-container ul,
@@ -499,18 +512,18 @@ header #main-nav ul ul .menu-action {
 }
 #page-content-container ul li,
 #page-content-container ol li {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 18px;
 }
 #page-content-container a {
   text-decoration: none;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 18px;
   color: #f7001f;
 }
 #page-content-container a.call-to-action {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 20px;
 }
 #page-content-container a:hover {
@@ -519,7 +532,8 @@ header #main-nav ul ul .menu-action {
 /*
  * STUDENT PROFILE
  */
-.anchor-block .anchor-text {
+#page-content-container .anchor-block .anchor-text,
+#page-content-container .anchor-block .anchor-text a {
   text-align: center;
   font-size: 17px;
   line-height: 19px;
@@ -538,7 +552,7 @@ header #main-nav ul ul .menu-action {
 #student-profile-text blockquote {
   font-style: italic;
   color: #5f1ff2;
-  font-family: "Gotham Rounded Medium", "Gotham Book", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 /*
  * FOOTER
@@ -724,7 +738,7 @@ input,
 button,
 select,
 textarea {
-  font-family: "Gotham Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;

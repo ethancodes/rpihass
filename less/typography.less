@@ -12,6 +12,7 @@
 
 // FONT FACE http://www.font-face.com
 
+/*
 @font-face {
   font-family: Gotham Book;
   src: url(../fonts/Gotham/Gotham-Book.otf) format("opentype");
@@ -26,6 +27,7 @@
   font-family: Gotham Rounded Book;
   src: url(../fonts/GothamRounded/GothamRounded-Book.otf) format("opentype");
 }
+*/
 
 
 // HEADINGS ====================================================
@@ -176,7 +178,8 @@ header {
 		#ident-bottom {
 			font-size: 15px;
 			line-height: 16px;
-			font-family: "Gotham Rounded Medium", "Gotham Book", "Helvetica Neue", Helvetica, sans-serif;
+			font-family: @altfont;
+			font-weight: bold;
 		}
 	}
 	
@@ -272,21 +275,23 @@ header {
 	h4 {
 		font-size: 16px;
 		line-height: 20px;
+		color: @rpigray;
+		font-weight: bold;
 	}
 	
 	.highlight {
 		font-weight: bold;
 		color: @rpipurple;
-	}
-	
+	}	
 	
 	p {
-		font-size: 12px;
+		font-size: 14px;
 		line-height: 18px;
 		margin: 1em 0;
+		color: @rpigray;
 	}
 	p.highlight {
-		font-size: 14px;
+		font-size: 16px;
 		line-height: 22px;
 	}
 	
@@ -294,7 +299,7 @@ header {
 		margin-left: 0;
 		padding-left: 3.125%;
 		li {
-			font-size: 12px;
+			font-size: 14px;
 			line-height: 18px;
 		}
 	}
@@ -302,12 +307,12 @@ header {
 	a {
 		text-decoration: none;
 		font-weight: bold;
-		font-size: 12px;
+		font-size: 14px;
 		line-height: 18px;
 		color: @rpired;
 	}
 	a.call-to-action {
-		font-size: 16px;
+		font-size: 18px;
 		line-height: 20px;
 	}
 	a:hover {
@@ -321,12 +326,15 @@ header {
 /*
  * STUDENT PROFILE
  */
-.anchor-block .anchor-text {
-	text-align: center;
-	font-size: 17px;
-	line-height: 19px;
-	font-weight: bold;
-	padding-top: 60px;
+ #page-content-container {
+	.anchor-block .anchor-text,
+	.anchor-block .anchor-text a {
+		text-align: center;
+		font-size: 17px;
+		line-height: 19px;
+		font-weight: bold;
+		padding-top: 60px;
+	}
 }
 #student-profile-text {
 
@@ -344,7 +352,7 @@ header {
 	blockquote {
 		font-style: italic;
 		color: @rpipurple;
-		font-family: "Gotham Rounded Medium", "Gotham Book", "Helvetica Neue", Helvetica, sans-serif;
+		font-family: @altfont;
 	}
 }
 

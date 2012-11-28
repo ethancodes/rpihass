@@ -52,6 +52,13 @@ $(document).ready(function() {
 			css += 'border-radius: ' + (m / 2).toString() + 'px; ';			
 			var offset = (w / 2) - (m / 2);
 			
+			// if there's a link in here, let's mangle that
+			$(this).children('a').each(function() {
+				var t = $(this).html().split(" ");
+				$(this).parent().addClass('link-words-' + t.length.toString());
+				$(this).html(t.join("<br />"));
+			});
+			
 			$(this).css('max-width', w.toString() + 'px').css('margin-left', '-' + offset.toString() + 'px');
 			$(this).wrap('<div class="circle-wrapper" style="' + css + '"></div>');
 		
