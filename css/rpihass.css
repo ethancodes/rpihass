@@ -241,6 +241,50 @@ header #main-nav {
   margin: 0 auto;
 }
 /*
+ * FACILITIES
+ */
+body.facilities #page-content-container {
+  padding: 6.25%;
+}
+#page-content-container .location {
+  margin-bottom: 25px;
+}
+#page-content-container .location .location-image {
+  float: left;
+  width: 68px;
+  margin-right: 3.6765%;
+  text-align: center;
+}
+#page-content-container .location .location-image .circle-wrapper {
+  margin: 0 auto;
+}
+#page-content-container .location .location-text {
+  float: left;
+  width: 55.147%;
+}
+#page-content-container .location .location-text p {
+  margin: 1.838% 0;
+}
+/*
+ * ART GALLERY
+ */
+body.artgallery #page-content-container {
+  padding: 6.25%;
+}
+#page-content-container #gallery-container #gallery-large-photo {
+  text-align: center;
+}
+#page-content-container #gallery-container #gallery-large-photo .circle-wrapper {
+  margin: 0 auto;
+}
+#page-content-container #gallery-container #gallery-small-photos {
+  text-align: center;
+}
+#page-content-container #gallery-container #gallery-small-photos .gallery-small-photo {
+  width: 68px;
+  display: inline;
+}
+/*
  * FOOTER
  */
 footer {
