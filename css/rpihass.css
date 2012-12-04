@@ -271,18 +271,39 @@ body.facilities #page-content-container {
 body.artgallery #page-content-container {
   padding: 6.25%;
 }
+#page-content-container #gallery-container {
+  margin-bottom: 6.25%;
+  /*
+	#gallery-small-photos {
+	
+		text-align: center;
+	
+		.gallery-small-photo {
+			width: 68px;
+/*			display: inline; */
+
+  /*
+			float: left;
+			margin: 0 3.125%;
+			
+			.circle-wrapper {
+			}
+		}
+	}
+	*/
+}
 #page-content-container #gallery-container #gallery-large-photo {
   text-align: center;
+  margin-bottom: 6.25%;
 }
 #page-content-container #gallery-container #gallery-large-photo .circle-wrapper {
   margin: 0 auto;
 }
-#page-content-container #gallery-container #gallery-small-photos {
+#page-content-container #gallery-container #gallery-small-photos tbody td {
   text-align: center;
 }
-#page-content-container #gallery-container #gallery-small-photos .gallery-small-photo {
-  width: 68px;
-  display: inline;
+#page-content-container #gallery-container #gallery-small-photos tbody td .circle-wrapper {
+  margin: 0 auto;
 }
 /*
  * FOOTER
@@ -1023,13 +1044,21 @@ table {
   margin-bottom: 1.5em;
   border-collapse: collapse;
   border-spacing: 0;
-  background-color: transparent;
+  /* background-color : @tablebackground; */
+
+  /*
+tbody tr:hover td,
+tbody tr:hover th {
+background-color : @tablehover; }
+*/
+
 }
 table th,
 table td {
   padding: 8px;
   vertical-align: top;
-  border-top: 1px solid #8c9bab;
+  /* border-top : @tableborderwidth @tableborderstyle @tableborder; */
+
   font-size: 14px;
   font-size: 1.4rem;
   line-height: 1.5em;
@@ -1057,10 +1086,6 @@ table tbody tr th {
   -ms-transition: background-color 0.25s 0 linear;
   -o-transition: background-color 0.25s 0 linear;
   transition: background-color 0.25s 0 linear;
-}
-table tbody tr:hover td,
-table tbody tr:hover th {
-  background-color: #a9b4c1;
 }
 .table-condensed th,
 .table-condensed td {

@@ -65,6 +65,18 @@ $(document).ready(function() {
 		});
 
 	}
+	
+	// magically center things
+	$('.jscenter').each(function() {
+		var child_width = 0;
+		$(this).children().each(function() {
+			child_width += $(this).width();
+		});
+		if (child_width > 0) {
+			$(this).css('width', child_width.toString() + "px").css('margin', '0 auto');
+		}
+		
+	});
 
 });
 
