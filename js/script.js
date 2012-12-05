@@ -66,6 +66,17 @@ $(document).ready(function() {
 
 	}
 	
+	// skew things, if your browser supports that
+	if ($('html').hasClass('csstransforms')) {
+		$('.skew').each(function() {
+			$('img', this).wrap('<span class="backskew"></span>');
+			$(this).addClass('skew-go');
+		});
+		$('.rotate').each(function() {
+//			$(this).addClass('rotate-go');
+		});
+	}
+	
 	// magically center things
 	$('.jscenter').each(function() {
 		var child_width = 0;
@@ -77,6 +88,20 @@ $(document).ready(function() {
 		}
 		
 	});
+	
+	
+	// media gallery slider on home page
+	$('.media-gallery-slider').each(function() {
+	
+		$(this).children().wrapAll('<div class="media-gallery-slider-wrapper"></div>');
+	
+//		$(this).addClass('media-gallery-slider-go');
+	
+	});
+	
+	
+	
+	
 
 });
 

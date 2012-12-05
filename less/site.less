@@ -100,12 +100,44 @@ header {
 }
 
 
+/*
+ * PAGE HEADER STUFF ON HOME PAGE
+ */
+#page-header .page-header-image {
+	width: 100%;
+	height: auto;
+}
+#page-header #page-nav-container {
+	padding: 3.125% 6.25%;
+	
+	#page-nav {
+		width: 100%;
+	}
+	
+	div div {
+		float: left;
+	}
+	
+	div.page-link {
+		width: 16.875%;
+		margin: 0 3.125%;
+	}
+	
+	div.sep {
+		min-height: 20px;
+		width: 2.5%;
+		text-align: center;
+	}
+	
+}
+
+
 
 
 /*
  * MAIN BODY STUFF
  */
-#page-content-container {
+.content-container {
 	padding: 3% 6.25%;
 	
 	h1 {
@@ -114,11 +146,64 @@ header {
 	
 }
 
+
+.concave,
+.convex {
+	padding-top: 33px;
+}
+
+.rotate-go {
+   -webkit-transform: rotate(-15deg); 
+   -moz-transform: rotate(-15deg); 
+   -o-transform: rotate(-15deg);
+   transform: rotate(-15deg);
+}
+
+.skew-go {
+   -webkit-transform: skewX(-15deg); 
+   -moz-transform: skewX(-15deg); 
+   -o-transform: skewX(-15deg);
+   transform: skewX(-15deg);
+   
+   .backskew {
+	   transform: skewX(15deg);
+   }
+}
+
+
+/*
+ * HOME PAGE MEDIA GALLERY SLIDER
+ */
+body.home #media {
+	padding: 0;
+	
+	h2 {
+		padding: 33px 6.25%;
+	}
+	
+}
+body.home #slider-container {
+	
+	.media-gallery-slider-wrapper {
+	
+		a {
+			width: 100%;
+			height: auto;
+			display: block;
+			float: left;
+		}
+	
+	}
+	
+}
+
+
+
 /*
  * STUDENT PROFILE
  */
  
-#page-content-container .anchor-wrapper {
+.content-container .anchor-wrapper {
 
 	margin-bottom: 3em;
 	border-bottom: 1px dotted #939598;
@@ -177,10 +262,10 @@ header {
 /*
  * FACILITIES
  */
-body.facilities #page-content-container {
+body.facilities #main-content-container {
 	padding: 6.25%;
 }
-#page-content-container .location {
+.content-container .location {
 
 	margin-bottom: 25px;
 
@@ -210,10 +295,10 @@ body.facilities #page-content-container {
 /*
  * ART GALLERY
  */
-body.artgallery #page-content-container {
+body.artgallery #main-content-container {
 	padding: 6.25%;
 }
-#page-content-container #gallery-container {
+.content-container #gallery-container {
 
 	margin-bottom: 6.25%;
 	
@@ -276,6 +361,7 @@ footer {
 
 #layout {
 	width: 100%;
+	min-width: 272px;
 	max-width: 569px;
 	margin: 0 auto;
 }

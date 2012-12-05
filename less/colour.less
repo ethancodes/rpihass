@@ -65,16 +65,51 @@ header {
 }
 
 
+/*
+ * PAGE HEADER NAV
+ */
+#page-header #page-nav-container {
+	background-color: black;
+	
+	div.sep {
+		background: transparent url(../images/header_nav_sep.jpg) center center no-repeat;
+	}
+}
+
+
+#news {
+	background-color: @rpilightgray2;
+}
+
+
+#media {
+	background-color: black;
+}
+
+.dark-gray-section.concave {
+	background: transparent url(../images/curve_wg_concave.jpg) top left no-repeat;
+	background-size: 100%;
+}
+
+.black-section.convex {
+	background: transparent url(../images/curve_gb_convex.jpg) top left no-repeat;
+	background-size: 100%;
+}
 
 
 /*
  * MAIN BODY STUFF
  */
-#page-content-container {
+.content-container {
 	background-color: #e7e8e9;
 }
+body.home #main-content-container {
+	// i have no idea why this one is a completely different color
+	// thank god i'm not a designer
+	background-color: #e5e5e5;
+}
 
-#page-content-container .anchor-block .anchor-text {
+.content-container .anchor-block .anchor-text {
 	background-color: black;
 	color: @rpiyellow;
 	

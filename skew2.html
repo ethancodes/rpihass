@@ -9,7 +9,7 @@
 <head>
 <meta charset="utf-8">
 
-<title>RPI HASS / Facilities</title>
+<title>RPI HASS / Home</title>
 
 <meta name="description" content="">
 <meta name="author" content="">
@@ -31,15 +31,12 @@
 <script src="js/jquery-1.7.2.min.js"></script>
 <script src="js/script.js"></script>
 
-<script type="text/javascript" src="//use.typekit.net/ouw2fxp.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
 <link rel="shortcut icon" href="/favicon.ico">
 
 <meta http-equiv="cleartype" content="on">
 </head>
 
-<body class="clearfix facilities">
+<body class="clearfix home">
 
 
 <div id="layout">
@@ -79,7 +76,7 @@
 						</ul>
 					</li>
 					
-					<li class="active last">
+					<li class="last">
 						<a href="#">Undergraduate</a>
 						<ul>
 							<li class="first active"><a href="#">Bachelors in Electronic Art</a></li>
@@ -92,7 +89,7 @@
 			
 			<li><a href="#">Research</a></li>
 
-			<li class="active"><a href="#">Facilities</a></li>
+			<li><a href="#">Facilities</a></li>
 
 			<li><a href="#">News &amp; Events</a></li>
 
@@ -103,42 +100,54 @@
 		</ul>
 	</nav>
 	
-	
 </header>
 
-<div id="main-content-container" class="content-container">
+<style>
+.xskew-go {
+   -webkit-transform: skewX(-15deg); 
+   -moz-transform: skewX(-15deg); 
+   -o-transform: skewX(-15deg);
+   transform: skewX(-15deg);
+}
+   
+.xskew-go .backskew {
+   -webkit-transform: skewX(15deg); 
+   -moz-transform: skewX(15deg); 
+   -o-transform: skewX(15deg);
+   transform: skewX(15deg);
+   display: inline-block;
+}
+</style>
 
-	<div class="location clearfix">
-		<div class="location-image"><img class="circle" width="68" height="68" src="http://placekitten.com/g/68/68" alt="Advanced Computer Music Production Studio" /></div>
-		<div class="location-text">
-			<p>
-			<a href="#">Advanced Computer Music Production Studio</a><br />
-			<strong>West Hall-410</strong>
-			</p>
-		</div>
-	</div>
+<script>
+$(document).ready(function() {
+	$('.xskew-go').each(function() {
+		var is = $('img', this).attr('src');
+		var ih = $('img', this).height();
+		var iw = $('img', this).width();
+		if (ih == 0) {
+			ih = iw * 0.66;
+		}
 
-	<div class="location clearfix">
-		<div class="location-image"><img class="fcircle" width="68" height="68" src="http://placekitten.com/g/68/68" alt="Art Gallery" /></div>
-		<div class="location-text">
-			<p>
-			<a href="#">Art Gallery</a><br />
-			<strong>West Hall-111</strong>
-			</p>
-		</div>
-	</div>
+		$(this).css('background', 'transparent url(' + is + ') center center no-repeat')
+		.css('height', ih.toString() + "px")
+		.css('width', iw.toString() + "px");
 
-	<div class="location clearfix">
-		<div class="location-image"><img class="fcircle" width="68" height="68" src="http://placekitten.com/g/68/68" alt="This is a really really long title to demonstrate more than two lines of text" /></div>
-		<div class="location-text">
-			<p>
-			<a href="#">This is a really really long title to demonstrate more than two lines of text</a><br />
-			<strong>West Hall-123</strong>
-			</p>
-		</div>
-	</div>
+		$('img', this).remove();
+	});
+});
+</script>
 
-
+<div style="width: 2000px; margin-left: -570px">
+<div class="xskew-go" style="float: left;">
+	<a href="#"><img src="images/home_slider/a.jpg" width="570" alt="a" /></a>
+</div>
+<div class="xskew-go" style="float: left;">
+	<a href="#"><img src="images/home_slider/c.jpg" width="570" alt="a" /></a>
+</div>
+<div class="xskew-go" style="float: left;">
+	<a href="#"><img src="images/home_slider/e.jpg" width="570" alt="a" /></a>
+</div>
 </div>
 
 <footer>

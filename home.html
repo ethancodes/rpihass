@@ -31,6 +31,35 @@
 <script src="js/jquery-1.7.2.min.js"></script>
 <script src="js/script.js"></script>
 
+<!--
+<link rel="stylesheet" href="css/responsiveslides.css">
+<script src="js/responsiveslides.min.js"></script>
+-->
+
+<link rel="stylesheet" href="Elastislide/css/elastislide.css">
+<script src="Elastislide/js/modernizr.custom.17475.js"></script>
+<script src="Elastislide/js/jquerypp.custom.js"></script>
+<script src="Elastislide/js/jquery.elastislide.js"></script>
+
+<script>
+  $(function () {
+  	/*
+    $(".rslides").responsiveSlides({
+    	auto: false,
+    	
+    });
+    */
+    var carousel_start = 0;
+    var carousel_slides = $('#carousel').children().length;
+    carousel_start = Math.floor(carousel_slides / 2);
+    
+    $('#carousel').elastislide({
+    	minItems: 1,
+    	start: carousel_start
+    });
+  });
+</script>
+
 <link rel="shortcut icon" href="/favicon.ico">
 
 <meta http-equiv="cleartype" content="on">
@@ -64,7 +93,7 @@
 	<nav id="main-nav">
 		<ul>
 		
-			<li class="first active">
+			<li class="first">
 				<a href="#">Academics</a>
 				<ul>
 					<li class="first">
@@ -76,7 +105,7 @@
 						</ul>
 					</li>
 					
-					<li class="active last">
+					<li class="last">
 						<a href="#">Undergraduate</a>
 						<ul>
 							<li class="first active"><a href="#">Bachelors in Electronic Art</a></li>
@@ -100,11 +129,86 @@
 		</ul>
 	</nav>
 	
-	
 </header>
 
-<div id="page-content-container">
+<div id="page-header">
+	<img class="page-header-image" src="images/header_home_small.jpg" alt="la la la" />
+	<div id="page-nav-container" class="clearfix">
+		<div id="page-nav" class="clearfix">
+			<div class="page-link first"><a href="#about">About<br />Dept.</a></div>
+<!--			<div class="sep"><img src="images/header_nav_sep.jpg" alt="" width="7" height="20" /></div> -->
+			<div class="sep"></div>
+			<div class="page-link"><a href="#news">Featured<br />News</a></div>
+			<div class="sep"></div>
+			<div class="page-link"><a href="#media">Media<br />Gallery</a></div>
+			<div class="sep"></div>
+			<div class="page-link page-link-out last"><a href="#">HASS<br />Home</a></div>		
+		</div>
+	</div>
 </div>
+
+<a name="about"></a>
+<div id="main-content-container" class="content-container">
+	<h1>
+		About<br />
+		Department<br />
+		of the Arts
+	</h1>
+	
+	<p class="highlight">
+		Rensselaer&rsquo;s Department of the Arts is generally considered to be the first integrated electronic arts program within a research university in the United States.
+	</p>
+	
+	<p>
+		Founded in 1972, the department initiated the inclusion of electronic Os eos num etur sandi consequi berent et as as mo ea as autatur? 
+		... 
+		<a href="#" class="read-more">MORE</a>
+	</p>
+
+</div>
+
+
+<a name="news"></a>
+<div id="news" class="dark-gray-section concave content-container">
+	<h2>Featured News</h2>
+	
+	<p class="news-item">
+		<span class="highlight">Interview with Larry Kagan</span><br />
+		An interview with Professor Larry Kagan from ArtSync on Vimeo. <a href="#">FULL STORY</a>
+	</p>
+	
+	<p class="news-item">
+		<span class="highlight">GameFest 2012 at Rensselaer Expands to a Regional Reach</span><br />
+		Get ready for the biggest GameFest yet, as the annual ... <a href="#">FULL STORY</a>
+	</p>
+	
+	<p class="news-item">
+		<span class="highlight">Temperro est mod et laborro mos et doloribuste mo</span><br />
+		Volut res dem et et fugiatur. Ipsumet atis maximagnis ... <a href="#">FULL STORY</a>
+	</p>
+
+</div>
+
+<a name="media"></a>
+<div id="media" class="black-section convex content-container">
+	<h2 class="light">
+		Photo and Media<br />
+		Gallery
+	</h2>
+	
+	<div id="slider-container" class="media-gallery-slider">
+	
+		<ul id="carousel" class="elastislide-list">
+			<li class="skew rotate"><a href="#"><img src="images/home_slider/a.jpg" alt="a" /></a></li>
+			<li class="skew rotate"><a href="#"><img src="images/home_slider/b.jpg" alt="b" /></a></li>
+			<li class="skew rotate"><a href="#"><img src="images/home_slider/c.jpg" alt="c" /></a></li>
+			<li class="skew rotate"><a href="#"><img src="images/home_slider/d.jpg" alt="d" /></a></li>
+			<li class="skew rotate"><a href="#"><img src="images/home_slider/e.jpg" alt="e" /></a></li>
+		</ul>
+		
+	</div>
+</div>
+
 
 <footer>
 	<p class="headline">Department of the Arts</p>

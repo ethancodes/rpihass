@@ -187,45 +187,104 @@ header #main-nav {
   padding-top: 18px;
 }
 /*
+ * PAGE HEADER STUFF ON HOME PAGE
+ */
+#page-header .page-header-image {
+  width: 100%;
+  height: auto;
+}
+#page-header #page-nav-container {
+  padding: 3.125% 6.25%;
+}
+#page-header #page-nav-container #page-nav {
+  width: 100%;
+}
+#page-header #page-nav-container div div {
+  float: left;
+}
+#page-header #page-nav-container div.page-link {
+  width: 16.875%;
+  margin: 0 3.125%;
+}
+#page-header #page-nav-container div.sep {
+  min-height: 20px;
+  width: 2.5%;
+  text-align: center;
+}
+/*
  * MAIN BODY STUFF
  */
-#page-content-container {
+.content-container {
   padding: 3% 6.25%;
 }
-#page-content-container h1 {
+.content-container h1 {
   clear: both;
+}
+.concave,
+.convex {
+  padding-top: 33px;
+}
+.rotate-go {
+  -webkit-transform: rotate(-15deg);
+  -moz-transform: rotate(-15deg);
+  -o-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+}
+.skew-go {
+  -webkit-transform: skewX(-15deg);
+  -moz-transform: skewX(-15deg);
+  -o-transform: skewX(-15deg);
+  transform: skewX(-15deg);
+}
+.skew-go .backskew {
+  transform: skewX(15deg);
+}
+/*
+ * HOME PAGE MEDIA GALLERY SLIDER
+ */
+body.home #media {
+  padding: 0;
+}
+body.home #media h2 {
+  padding: 33px 6.25%;
+}
+body.home #slider-container .media-gallery-slider-wrapper a {
+  width: 100%;
+  height: auto;
+  display: block;
+  float: left;
 }
 /*
  * STUDENT PROFILE
  */
-#page-content-container .anchor-wrapper {
+.content-container .anchor-wrapper {
   margin-bottom: 3em;
   border-bottom: 1px dotted #939598;
   padding-bottom: 1em;
   height: 133px;
 }
-#page-content-container .anchor-wrapper .anchor-block .anchor-left {
+.content-container .anchor-wrapper .anchor-block .anchor-left {
   float: left;
   width: 50%;
 }
-#page-content-container .anchor-wrapper .anchor-block .anchor-right {
+.content-container .anchor-wrapper .anchor-block .anchor-right {
   float: right;
   width: 50%;
 }
-#page-content-container .anchor-wrapper .anchor-block .anchor-right .anchor-text {
+.content-container .anchor-wrapper .anchor-block .anchor-right .anchor-text {
   height: 73px;
   width: 200px;
   float: right;
 }
-#page-content-container .anchor-wrapper .anchor-block .anchor-right .circle-wrapper {
+.content-container .anchor-wrapper .anchor-block .anchor-right .circle-wrapper {
   float: right;
 }
-#page-content-container .anchor-wrapper .anchor-block .anchor-right .circle-wrapper .anchor-text {
+.content-container .anchor-wrapper .anchor-block .anchor-right .circle-wrapper .anchor-text {
   float: none;
   height: 100%;
 }
-#page-content-container .anchor-wrapper .anchor-block .anchor-right .circle-wrapper .link-words-2,
-#page-content-container .anchor-wrapper .anchor-block .anchor-right .circle-wrapper .link-words-2 a {
+.content-container .anchor-wrapper .anchor-block .anchor-right .circle-wrapper .link-words-2,
+.content-container .anchor-wrapper .anchor-block .anchor-right .circle-wrapper .link-words-2 a {
   padding-top: 50px;
 }
 #student-profile-container {
@@ -243,35 +302,35 @@ header #main-nav {
 /*
  * FACILITIES
  */
-body.facilities #page-content-container {
+body.facilities #main-content-container {
   padding: 6.25%;
 }
-#page-content-container .location {
+.content-container .location {
   margin-bottom: 25px;
 }
-#page-content-container .location .location-image {
+.content-container .location .location-image {
   float: left;
   width: 68px;
   margin-right: 3.6765%;
   text-align: center;
 }
-#page-content-container .location .location-image .circle-wrapper {
+.content-container .location .location-image .circle-wrapper {
   margin: 0 auto;
 }
-#page-content-container .location .location-text {
+.content-container .location .location-text {
   float: left;
   width: 55.147%;
 }
-#page-content-container .location .location-text p {
+.content-container .location .location-text p {
   margin: 1.838% 0;
 }
 /*
  * ART GALLERY
  */
-body.artgallery #page-content-container {
+body.artgallery #main-content-container {
   padding: 6.25%;
 }
-#page-content-container #gallery-container {
+.content-container #gallery-container {
   margin-bottom: 6.25%;
   /*
 	#gallery-small-photos {
@@ -292,17 +351,17 @@ body.artgallery #page-content-container {
 	}
 	*/
 }
-#page-content-container #gallery-container #gallery-large-photo {
+.content-container #gallery-container #gallery-large-photo {
   text-align: center;
   margin-bottom: 6.25%;
 }
-#page-content-container #gallery-container #gallery-large-photo .circle-wrapper {
+.content-container #gallery-container #gallery-large-photo .circle-wrapper {
   margin: 0 auto;
 }
-#page-content-container #gallery-container #gallery-small-photos tbody td {
+.content-container #gallery-container #gallery-small-photos tbody td {
   text-align: center;
 }
-#page-content-container #gallery-container #gallery-small-photos tbody td .circle-wrapper {
+.content-container #gallery-container #gallery-small-photos tbody td .circle-wrapper {
   margin: 0 auto;
 }
 /*
@@ -319,6 +378,7 @@ footer .logo {
 }
 #layout {
   width: 100%;
+  min-width: 272px;
   max-width: 569px;
   margin: 0 auto;
 }
@@ -543,62 +603,100 @@ header #main-nav ul ul .menu-action {
   line-height: 12px;
 }
 /*
+ * PAGE NAV
+ */
+div.page-link {
+  text-align: center;
+  font-size: 10px;
+  line-height: 11px;
+}
+div.page-link a {
+  color: #f4e71a;
+  font-size: 10px;
+  line-height: 11px;
+  font-weight: bold;
+  text-decoration: none;
+}
+div.page-link a:hover {
+  color: white;
+}
+div.page-link-out a {
+  color: #f7001f;
+}
+div.page-link-out a:hover {
+  color: white;
+}
+/*
  * MAIN PAGE
  */
-#page-content-container h1 {
+.content-container h1 {
   font-size: 26px;
   line-height: 30px;
   color: #414042;
 }
-#page-content-container h4 {
+.content-container h2 {
+  font-size: 26px;
+  line-height: 30px;
+  color: #f7001f;
+}
+.content-container h2.light {
+  color: #bcbec0;
+}
+.content-container h4 {
   font-size: 16px;
   line-height: 20px;
   color: #414042;
   font-weight: bold;
 }
-#page-content-container .highlight {
+.content-container .highlight {
   font-weight: bold;
   color: #5f1ff2;
 }
-#page-content-container p {
+.content-container p {
   font-size: 14px;
   line-height: 18px;
   margin: 1em 0;
   color: #414042;
 }
-#page-content-container p.highlight {
+.content-container p.highlight {
   font-size: 16px;
   line-height: 22px;
 }
-#page-content-container ul,
-#page-content-container ol {
+.content-container ul,
+.content-container ol {
   margin-left: 0;
   padding-left: 3.125%;
 }
-#page-content-container ul li,
-#page-content-container ol li {
+.content-container ul li,
+.content-container ol li {
   font-size: 14px;
   line-height: 18px;
 }
-#page-content-container a {
+.content-container a {
   text-decoration: none;
   font-weight: bold;
   font-size: 14px;
   line-height: 18px;
   color: #f7001f;
 }
-#page-content-container a.call-to-action {
+.content-container a.call-to-action {
   font-size: 18px;
   line-height: 20px;
 }
-#page-content-container a:hover {
+.content-container a:hover {
   color: #414042;
+}
+.content-container a.read-more {
+  color: #414042;
+}
+.content-container a.read-more:hover {
+  color: #f7001f;
 }
 /*
  * STUDENT PROFILE
  */
-#page-content-container .anchor-block .anchor-text,
-#page-content-container .anchor-block .anchor-text a {
+#main-content-container .anchor-block .anchor-text,
+#main-content-container .anchor-block .anchor-text a {
   text-align: center;
   font-size: 17px;
   line-height: 19px;
@@ -685,19 +783,45 @@ header #main-nav ul li.active ul li.active {
   background-position: 0 4px;
 }
 /*
+ * PAGE HEADER NAV
+ */
+#page-header #page-nav-container {
+  background-color: black;
+}
+#page-header #page-nav-container div.sep {
+  background: transparent url(../images/header_nav_sep.jpg) center center no-repeat;
+}
+#news {
+  background-color: #d1d2d4;
+}
+#media {
+  background-color: black;
+}
+.dark-gray-section.concave {
+  background: transparent url(../images/curve_wg_concave.jpg) top left no-repeat;
+  background-size: 100%;
+}
+.black-section.convex {
+  background: transparent url(../images/curve_gb_convex.jpg) top left no-repeat;
+  background-size: 100%;
+}
+/*
  * MAIN BODY STUFF
  */
-#page-content-container {
+.content-container {
   background-color: #e7e8e9;
 }
-#page-content-container .anchor-block .anchor-text {
+body.home #main-content-container {
+  background-color: #e5e5e5;
+}
+.content-container .anchor-block .anchor-text {
   background-color: black;
   color: #f4e71a;
 }
-#page-content-container .anchor-block .anchor-text a {
+.content-container .anchor-block .anchor-text a {
   color: #f4e71a;
 }
-#page-content-container .anchor-block .anchor-text a:hover {
+.content-container .anchor-block .anchor-text a:hover {
   color: white;
 }
 /*
