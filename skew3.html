@@ -1,0 +1,258 @@
+<!doctype html>
+
+<!-- HTML5 Boilerplate -->
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+
+<head>
+<meta charset="utf-8">
+
+<title>RPI HASS / Home</title>
+
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="css/rpihass.css">
+
+<!--[if (lt IE 9) & (!IEMobile)]>
+<script src="js/selectivizr-min.js"></script>
+<![endif]-->
+
+<!-- JavaScript -->
+<script src="js/modernizr-2.5.3-min.js"></script>
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/script.js"></script>
+
+<link rel="shortcut icon" href="/favicon.ico">
+
+<meta http-equiv="cleartype" content="on">
+</head>
+
+<body class="clearfix home">
+
+
+<div id="layout">
+
+<header>
+	
+	<div id="icons">
+		<a id="icon-search" href="#"></a>
+		<a id="icon-home" href="#"></a>
+	</div>
+	
+	<div id="contact">
+		<a href="#">Contact</a>
+	</div>
+	
+	<div id="ident-wrapper">
+		<div id="ident-top">
+			<span>Rensselaer</span>
+		</div>
+		<div id="ident-bottom">
+			<span>Department of the Arts</span>
+		</div>
+	</div>
+	
+	<nav id="main-nav">
+		<ul>
+		
+			<li class="first">
+				<a href="#">Academics</a>
+				<ul>
+					<li class="first">
+						<a href="#">Graduate</a>
+						<ul>
+							<li class="first"><a href="#">one</a></li>
+							<li><a href="#">two</a></li>
+							<li class="last"><a href="#">three</a></li>
+						</ul>
+					</li>
+					
+					<li class="last">
+						<a href="#">Undergraduate</a>
+						<ul>
+							<li class="first active"><a href="#">Bachelors in Electronic Art</a></li>
+							<li><a href="#">Degree in Electronic Media Arts and Communication</a></li>
+							<li class="last"><a href="#">Arts Minors</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			
+			<li><a href="#">Research</a></li>
+
+			<li><a href="#">Facilities</a></li>
+
+			<li><a href="#">News &amp; Events</a></li>
+
+			<li><a href="#">People</a></li>
+
+			<li class="last"><a href="#">Miscellaneous</a></li>
+		
+		</ul>
+	</nav>
+	
+</header>
+
+<style>
+.midShell {
+	transform:rotate(15deg); 
+	position:absolute;
+	top:0px;
+}
+/*
+.midShell.pos-0 {
+	left: 0;
+}
+.midShell.pos-1 {
+	left: 140px;
+}
+.midShell.pos-2 {
+	left: 280px;
+}
+.midShell.pos-3 {
+	left: 420px;
+}
+.midShell.pos-4 {
+	left: 560px;
+}
+*/
+
+.midShell .innerShell {
+	position:relative;
+	/*
+	width:185px;
+	height:238px;
+	*/
+	overflow:hidden;
+}
+.midShell .innerShell img {
+	position:inherit;
+	transform:translate(-28px, 28px) rotate(-15deg);
+}
+
+#outerShell {
+	position: relative;
+}
+</style>
+
+<script>
+$(document).ready(function() {
+	window.onresize = function(e) {
+		doSlider();
+	}
+	doSlider();
+});
+
+// figure out how big the images are
+// figure out the dimensions of innerShell
+// figure out how far to space them apart
+function doSlider() {
+
+	var cw = $("header").outerWidth();
+	var iw = cw * 0.4;
+	var ih = iw * 1.06667;
+	var id = iw * 0.73334;
+	var ic = 0;
+	var imgh = 0;
+	var imgw = 0;
+	$(".innerShell").each(function() {
+		$(this).css('width', iw.toString() + "px").css('height', ih.toString() + "px");
+		ic++;
+		imgh = $("img", this).height();
+		imgw = $("img", this).width();
+	});
+	var displace = 0;
+	$(".midShell").each(function() {
+		$(this).css('left', displace.toString() + "px");
+		displace += id;
+	});
+	
+	var middle = cw / 2;
+	var half = (ic * id) / 2;
+	
+	$("#outerShell")
+		.css('height', imgh.toString() + "px")
+		.css('width', (ic * id).toString() + "px")
+		.css('margin-left', ((half - middle) * -1).toString() + "px");
+}
+
+</script>
+
+<div id="main-content-container" style="overflow: hidden;">
+
+<div id="outerShell">
+<div class="midShell pos-0">
+	<div class="innerShell">
+		<a href="#"><img src="images/home_slider/a.jpg" alt="a" /></a>
+	</div>
+</div>
+
+<div class="midShell pos-1">
+	<div class="innerShell">
+		<a href="#"><img src="images/home_slider/c.jpg" alt="c" /></a>
+	</div>
+</div>
+
+<div class="midShell pos-2">
+	<div class="innerShell">
+		<a href="#"><img src="images/home_slider/e.jpg" alt="e" /></a>
+	</div>
+</div>
+
+<div class="midShell pos-3">
+	<div class="innerShell">
+		<a href="#"><img src="images/home_slider/b.jpg" alt="b" /></a>
+	</div>
+</div>
+
+<div class="midShell pos-4">
+	<div class="innerShell">
+		<a href="#"><img src="images/home_slider/d.jpg" alt="d" /></a>
+	</div>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+	<p class="headline">Department of the Arts</p>
+	<p class="headline">General Inquiries</p>
+	<p><a href="mailto:electronicarts@rpi.edu">electronicarts@rpi.edu</a></p>
+	<p>
+		Phone: 518.276.4778<br />
+		Fax: 518.276.4370<br />
+		West Hall, Room 107<br />
+		110 8th Street, Troy, NY 12180
+	</p>
+	<p><a href="#">More department contacts</a></p>
+	
+	<p>&nbsp;</p>
+	
+	<p><a href="#">
+		School of Humanities, Arts<br />
+		and Social Sciences
+	</a></p>
+	
+	<img class="logo" src="images/logo.jpg" alt="Rensselaer">
+	
+	<p class="legal">
+		Copyright 2012 Rensselaer<br />
+		Polytechnic Institute (RPI). All rights reserved.
+	</p>
+	
+</footer>
+
+</div>
+
+</body>
+</html>
