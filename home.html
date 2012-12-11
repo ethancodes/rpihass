@@ -32,33 +32,41 @@
 <script src="js/script.js"></script>
 
 <!--
-<link rel="stylesheet" href="css/responsiveslides.css">
-<script src="js/responsiveslides.min.js"></script>
+<link rel="stylesheet" type="text/css" href="Elastislide/css/elastislide.css" />
+<script src="Elastislide/js/modernizr.custom.17475.js"></script>
+<script type="text/javascript" src="Elastislide/js/jquerypp.custom.js"></script>
+<script type="text/javascript" src="Elastislide/js/jquery.elastislide.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	var m = Math.floor($('#carousel').children().length / 2);
+	
+	$( '#carousel' ).elastislide({
+		minItems : 1,
+		start : m,
+	});
+	
+});
+</script>
 -->
 
-<link rel="stylesheet" href="Elastislide/css/elastislide.css">
-<script src="Elastislide/js/modernizr.custom.17475.js"></script>
-<script src="Elastislide/js/jquerypp.custom.js"></script>
-<script src="Elastislide/js/jquery.elastislide.js"></script>
-
+<link rel="stylesheet" href="rslides/rslides.css" />
+<script src="rslides/rslides.min.js"></script>
 <script>
-  $(function () {
-  	/*
-    $(".rslides").responsiveSlides({
-    	auto: false,
-    	
-    });
-    */
-    var carousel_start = 0;
-    var carousel_slides = $('#carousel').children().length;
-    carousel_start = Math.floor(carousel_slides / 2);
-    
-    $('#carousel').elastislide({
-    	minItems: 1,
-    	start: carousel_start
-    });
-  });
+$(document).ready(function() {
+	$('#carousel').responsiveSlides({
+		auto: false,
+		pager: true,
+		/*
+		nav: true,
+		prevText: "&lt;",
+		nextText: "&gt;"
+		*/
+	});
+});
 </script>
+
+
 
 <link rel="shortcut icon" href="/favicon.ico">
 
@@ -83,7 +91,7 @@
 	
 	<div id="ident-wrapper">
 		<div id="ident-top">
-			<span>Rensselaer</span>
+			<span><a href="#">Rensselaer</a></span>
 		</div>
 		<div id="ident-bottom">
 			<span>Department of the Arts</span>
@@ -136,7 +144,6 @@
 	<div id="page-nav-container" class="clearfix">
 		<div id="page-nav" class="clearfix">
 			<div class="page-link first"><a href="#about">About<br />Dept.</a></div>
-<!--			<div class="sep"><img src="images/header_nav_sep.jpg" alt="" width="7" height="20" /></div> -->
 			<div class="sep"></div>
 			<div class="page-link"><a href="#news">Featured<br />News</a></div>
 			<div class="sep"></div>
@@ -196,17 +203,13 @@
 		Gallery
 	</h2>
 	
-	<div id="slider-container" class="media-gallery-slider">
-	
-		<ul id="carousel" class="elastislide-list">
-			<li class="skew rotate"><a href="#"><img src="images/home_slider/a.jpg" alt="a" /></a></li>
-			<li class="skew rotate"><a href="#"><img src="images/home_slider/b.jpg" alt="b" /></a></li>
-			<li class="skew rotate"><a href="#"><img src="images/home_slider/c.jpg" alt="c" /></a></li>
-			<li class="skew rotate"><a href="#"><img src="images/home_slider/d.jpg" alt="d" /></a></li>
-			<li class="skew rotate"><a href="#"><img src="images/home_slider/e.jpg" alt="e" /></a></li>
-		</ul>
-		
-	</div>
+	<ul id="carousel" class="elastislide-list">
+		<li><a href="#"><img src="images/home_slider/a.jpg" alt="a" /></a></li>
+		<li><a href="#"><img src="images/home_slider/b.jpg" alt="b" /></a></li>
+		<li><a href="#"><img src="images/home_slider/c.jpg" alt="c" /></a></li>
+		<li><a href="#"><img src="images/home_slider/d.jpg" alt="d" /></a></li>
+		<li><a href="#"><img src="images/home_slider/e.jpg" alt="e" /></a></li>
+	</ul>
 </div>
 
 

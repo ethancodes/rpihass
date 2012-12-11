@@ -224,35 +224,65 @@ header #main-nav {
 .convex {
   padding-top: 33px;
 }
+/*
 .rotate-go {
-  -webkit-transform: rotate(-15deg);
-  -moz-transform: rotate(-15deg);
-  -o-transform: rotate(-15deg);
-  transform: rotate(-15deg);
+   -webkit-transform: rotate(-15deg); 
+   -moz-transform: rotate(-15deg); 
+   -o-transform: rotate(-15deg);
+   transform: rotate(-15deg);
 }
+
 .skew-go {
-  -webkit-transform: skewX(-15deg);
-  -moz-transform: skewX(-15deg);
-  -o-transform: skewX(-15deg);
-  transform: skewX(-15deg);
+   -webkit-transform: skewX(-15deg); 
+   -moz-transform: skewX(-15deg); 
+   -o-transform: skewX(-15deg);
+   transform: skewX(-15deg);
+   
+   .backskew {
+	   transform: skewX(15deg);
+   }
 }
-.skew-go .backskew {
-  transform: skewX(15deg);
-}
+*/
 /*
  * HOME PAGE MEDIA GALLERY SLIDER
  */
 body.home #media {
   padding: 0;
+  overflow: hidden;
+  /*
+	.outerShell {
+		-webkit-transform:rotate(15deg); 
+		-moz-transform:rotate(15deg); 
+		-o-transform:rotate(15deg); 
+		transform:rotate(15deg); 
+		position:absolute;
+		top:0px;
+		
+		.innerShell {
+			position:relative;
+			overflow:hidden;
+
+			img {
+				position:inherit;
+				-webkit-transform:translate(-28px, 28px) rotate(-15deg);
+				-moz-transform:translate(-28px, 28px) rotate(-15deg);
+				-o-transform:translate(-28px, 28px) rotate(-15deg);
+				transform:translate(-28px, 28px) rotate(-15deg);
+			}
+		}
+	}
+	
+	.slider-go {
+		position: relative;
+	}
+	*/
+
 }
 body.home #media h2 {
   padding: 33px 6.25%;
 }
-body.home #slider-container .media-gallery-slider-wrapper a {
-  width: 100%;
-  height: auto;
-  display: block;
-  float: left;
+body.home #media #carousel {
+  padding-left: 0;
 }
 /*
  * STUDENT PROFILE
@@ -530,11 +560,14 @@ header #contact a {
   font-size: 9px;
   text-decoration: none;
 }
-header #ident-wrapper #ident-top {
+header #ident-wrapper #ident-top,
+header #ident-wrapper #ident-top a {
   text-transform: uppercase;
   font-size: 12px;
   line-height: 1em;
   font-weight: bold;
+  text-decoration: none;
+  color: white;
 }
 header #ident-wrapper #ident-bottom {
   font-size: 15px;
@@ -797,14 +830,17 @@ header #main-nav ul li.active ul li.active {
 #media {
   background-color: black;
 }
+/*
 .dark-gray-section.concave {
-  background: transparent url(../images/curve_wg_concave.jpg) top left no-repeat;
-  background-size: 100%;
+	background: transparent url(../images/curve_wg_concave.jpg) top left no-repeat;
+	background-size: 100%;
 }
+
 .black-section.convex {
-  background: transparent url(../images/curve_gb_convex.jpg) top left no-repeat;
-  background-size: 100%;
+	background: transparent url(../images/curve_gb_convex.jpg) top left no-repeat;
+	background-size: 100%;
 }
+*/
 /*
  * MAIN BODY STUFF
  */

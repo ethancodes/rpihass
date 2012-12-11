@@ -1,4 +1,6 @@
-body .rslides {
+/*! http://responsiveslides.com v1.32 by @viljamis */
+
+.rslides {
   position: relative;
   list-style: none;
   overflow: hidden;
@@ -7,7 +9,7 @@ body .rslides {
   margin: 0;
   }
 
-body .rslides li {
+.rslides li {
   position: absolute;
   display: none;
   width: 100%;
@@ -15,16 +17,25 @@ body .rslides li {
   top: 0;
   }
 
-body .rslides li:first-child {
+.rslides li:first-child {
   position: relative;
   display: block;
   float: left;
   }
 
-body .rslides img {
+.rslides img {
   display: block;
   height: auto;
   float: left;
   width: 100%;
   border: 0;
   }
+  
+
+.rslides_tabs {
+	text-align: center;
+}  
+.rslides_tabs li {
+	display: inline;
+	margin: 5px 10px;
+}

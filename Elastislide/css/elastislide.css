@@ -28,7 +28,7 @@
 }
 
 .elastislide-horizontal {
-/*	padding: 10px 40px; */
+	padding: 10px 40px;
 }
 
 .elastislide-vertical {
@@ -83,10 +83,6 @@
 }
 
 /* Navigation Arrows */
-
-.elastislide-wrapper nav {
-	display: none;
-}
 
 .elastislide-wrapper nav span {
 	position: absolute;

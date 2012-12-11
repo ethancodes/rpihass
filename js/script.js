@@ -66,16 +66,22 @@ $(document).ready(function() {
 
 	}
 	
+	/*
 	// skew things, if your browser supports that
-	if ($('html').hasClass('csstransforms')) {
-		$('.skew').each(function() {
-			$('img', this).wrap('<span class="backskew"></span>');
-			$(this).addClass('skew-go');
+	if ($('html').hasClass('csstransforms')) {		
+		$(".media-gallery-slider").each(function() {
+			var id = $(this).attr('id');
+			$(this).children().each(function() {
+				$(this).wrap('<div class="outerShell"><div class="innerShell"></div></div>');
+			});
+			window.onresize = function(e) {
+				doSlider(id);
+			}			
+			doSlider(id);
 		});
-		$('.rotate').each(function() {
-//			$(this).addClass('rotate-go');
-		});
+		
 	}
+	*/
 	
 	// magically center things
 	$('.jscenter').each(function() {
@@ -87,22 +93,47 @@ $(document).ready(function() {
 			$(this).css('width', child_width.toString() + "px").css('margin', '0 auto');
 		}
 		
-	});
-	
-	
-	// media gallery slider on home page
-	$('.media-gallery-slider').each(function() {
-	
-		$(this).children().wrapAll('<div class="media-gallery-slider-wrapper"></div>');
-	
-//		$(this).addClass('media-gallery-slider-go');
-	
-	});
-	
-	
+	});	
 	
 	
 
 });
+
+
+// figure out how big the images are
+// figure out the dimensions of innerShell
+// figure out how far to space them apart
+function doSlider(slider_id) {
+
+	if (slider_id != "") slider_id = "#" + slider_id;
+
+	var cw = $("header").outerWidth();
+	var iw = 570 * 0.4;
+	var ih = iw * 1.06667;
+	var id = iw * 0.73334;
+	var ic = 0;
+	var imgh = 0;
+	var imgw = 0;
+	$(slider_id + " .innerShell").each(function() {
+		$(this).css('width', iw.toString() + "px").css('height', ih.toString() + "px");
+		ic++;
+		imgh = $("img", this).height();
+		imgw = $("img", this).width();
+	});
+	var displace = 0;
+	$(slider_id + " .outerShell").each(function() {
+		$(this).css('left', displace.toString() + "px");
+		displace += id;
+	});
+	
+	var middle = cw / 2;
+	var half = (ic * id) / 2;
+	
+	$(slider_id)
+		.addClass('slider-go')
+		.css('height', imgh.toString() + "px")
+		.css('width', (ic * id).toString() + "px")
+		.css('margin-left', ((half - middle) * -1).toString() + "px");
+}
 
 
