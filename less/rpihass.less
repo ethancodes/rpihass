@@ -68,6 +68,21 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 @import "print.less";
 }
 
+
+
+// large size is anything above 570px
+// hopefully everything will fit here
+@media only screen and (min-width: 570px) {
+@import "rpihass-large.less";
+}
+
+// if things need a more subtle adjustment
+@media only screen and (min-width: 768px) {
+@import "768.less";
+}
+
+/*
+
 // 480px
 @media only screen and (min-width: 480px) {
 @import "480.less";
@@ -92,6 +107,8 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 @media only screen and (min-width: 1382px) {
 @import "1382.less";
 }
+
+*/
 
 // 2x
 @media
