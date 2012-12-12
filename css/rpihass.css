@@ -216,6 +216,7 @@ header #main-nav {
  */
 .content-container {
   padding: 3% 6.25%;
+  overflow: hidden;
 }
 .content-container h1 {
   clear: both;
@@ -317,8 +318,16 @@ body.home #media #carousel {
 .content-container .anchor-wrapper .anchor-block .anchor-right .circle-wrapper .link-words-2 a {
   padding-top: 50px;
 }
-#breadcrumb {
+#breadcrumb,
+#image-container {
   display: none;
+}
+#image-container {
+  float: right;
+  width: 26.5625%;
+}
+#image-container .image {
+  margin-bottom: 25px;
 }
 #student-profile-container {
   clear: both;
@@ -335,10 +344,8 @@ body.home #media #carousel {
 /*
  * FACILITIES
  */
-body.facilities #main-content-container {
-  padding: 6.25%;
-}
 .content-container .location {
+  margin-top: 25px;
   margin-bottom: 25px;
 }
 .content-container .location .location-image {
@@ -356,6 +363,10 @@ body.facilities #main-content-container {
 }
 .content-container .location .location-text p {
   margin: 1.838% 0;
+}
+.content-container .location .location-desc {
+  clear: both;
+  display: none;
 }
 /*
  * ART GALLERY
@@ -1473,6 +1484,9 @@ table tbody tr th {
     float: left;
     width: 70%;
   }
+  #image-container {
+    display: block;
+  }
   /* STUDENT PROFILE */
   #student-profile-container {
     clear: none;
@@ -1543,6 +1557,17 @@ table tbody tr th {
   header #main-nav ul li.active ul a {
     font-size: 14px;
     line-height: 16px;
+  }
+  .content-container .location {
+    float: left;
+    width: 47%;
+    margin-right: 2.5%;
+  }
+  .content-container .location .location-desc {
+    display: block;
+  }
+  .content-container .location:nth-child(even) {
+    clear: both;
   }
 }
 /*

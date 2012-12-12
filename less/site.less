@@ -139,6 +139,7 @@ header {
  */
 .content-container {
 	padding: 3% 6.25%;
+	overflow: hidden;
 	
 	h1 {
 		clear: both;
@@ -264,10 +265,19 @@ body.home #media {
 }
 
 
-#breadcrumb {
+#breadcrumb,
+#image-container {
 	display: none;
 }
 
+#image-container {
+	float: right;
+	width: 26.5625%;
+	
+	.image {
+		margin-bottom: 25px;
+	}
+}	
  
 #student-profile-container {
 	clear: both;
@@ -289,11 +299,9 @@ body.home #media {
 /*
  * FACILITIES
  */
-body.facilities #main-content-container {
-	padding: 6.25%;
-}
 .content-container .location {
 
+	margin-top: 25px;
 	margin-bottom: 25px;
 
 	.location-image {
@@ -314,6 +322,11 @@ body.facilities #main-content-container {
 	
 	.location-text p {
 		margin: 1.838% 0;
+	}
+	
+	.location-desc {
+		clear: both;
+		display: none;
 	}
 
 }

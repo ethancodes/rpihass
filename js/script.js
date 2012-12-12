@@ -138,7 +138,10 @@ function doSlider(slider_id) {
 /*
  * SET UP THE MENU
  */
-function setUpMenuNav() { 
+function setUpMenuNav() {
+
+	$(".menu-action").remove();
+
 	$("#main-nav ul li").each(function() {
 		// do i have a submenu?
 		var submenu = $(this).children("ul").length;
