@@ -1,39 +1,37 @@
+
+var this_viewport = '';
+var last_viewport = '';
+
 $(document).ready(function() {
 
-	/*
-	 * SET UP THE MENU
-	 */
-	 
-	$("#main-nav ul li").each(function() {
-		// do i have a submenu?
-		var submenu = $(this).children("ul").length;
-		if (submenu > 0) {
-		
-			// okay let's add some fancy blah blah blah
-			if ($(this).hasClass('active')) {
-				$(this).children('a').after('<a class="menu-action menu-open" href="#">&mdash;</a>');
-			} else {
-				$(this).children('a').after('<a class="menu-action" href="#">+</a>');
-			}
-		
-		}
-	});
-	
-	$(".menu-action").on('click', function(e) {
-		e.preventDefault();
-		if ($(this).hasClass("menu-open")) {
-			// currently open, close
-			$(this).siblings("ul").slideUp();
-			$(this).html("+");
-			$(this).removeClass("menu-open");
+	var viewport = $(window).width();
+	if (viewport < 570) {
+		this_viewport = 's';
+	} else {
+		this_viewport = 'l';
+	}
+	if (this_viewport != last_viewport) last_viewport = this_viewport;
+
+	window.onresize = function(e) {
+		var viewport = $(window).width();
+		if (viewport < 570) {
+			this_viewport = 's';
 		} else {
-			// currently closed, open
-			$(this).siblings("ul").slideDown();
-			$(this).html("&mdash;");
-			$(this).addClass("menu-open");
+			this_viewport = 'l';
 		}
-	});
+		if (this_viewport != last_viewport) {
+			last_viewport = this_viewport;
+			
+			if (this_viewport == "s") {
+				viewportSmall();
+			} else if (this_viewport == "l") {
+				viewportLarge();
+			}
+			
+		}
+	}
 	
+	setUpMenuNav();	
 	
 	// circle things, if your browser supports that
 	if ($('html').hasClass('borderradius')) {
@@ -135,5 +133,62 @@ function doSlider(slider_id) {
 		.css('width', (ic * id).toString() + "px")
 		.css('margin-left', ((half - middle) * -1).toString() + "px");
 }
+
+
+/*
+ * SET UP THE MENU
+ */
+function setUpMenuNav() { 
+	$("#main-nav ul li").each(function() {
+		// do i have a submenu?
+		var submenu = $(this).children("ul").length;
+		if (submenu > 0) {
+		
+			// okay let's add some fancy blah blah blah
+			if ($(this).hasClass('active')) {
+				$(this).children('a').after('<a class="menu-action menu-open" href="#">&mdash;</a>');
+			} else {
+				$(this).children('a').after('<a class="menu-action" href="#">+</a>');
+			}
+		
+		}
+	});
+	
+	$(".menu-action").on('click', function(e) {
+		e.preventDefault();
+		if ($(this).hasClass("menu-open")) {
+			// currently open, close
+			$(this).siblings("ul").slideUp();
+			$(this).html("+");
+			$(this).removeClass("menu-open");
+		} else {
+			// currently closed, open
+			$(this).siblings("ul").slideDown();
+			$(this).html("&mdash;");
+			$(this).addClass("menu-open");
+		}
+	});
+}
+
+
+/*
+ * Stuff to do when you switch from large to small.
+ */
+function viewportSmall() {
+	setUpMenuNav();
+}
+
+
+/*
+ * Stuff to do when you switch from small to large.
+ */
+function viewportLarge() {
+
+//	alert('switching to large');
+	$("#main-nav li:not(.active) ul").hide();
+	$(".menu-action").remove();
+
+}
+
 
 
