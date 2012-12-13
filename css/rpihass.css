@@ -1450,8 +1450,6 @@ table tbody tr th {
     background-image: url(../images/content_bg.jpg);
     background-position: top right;
     background-repeat: no-repeat;
-    /*	min-height: 1100px; */
-  
   }
   .content-container h1 {
     font-size: 48px;
@@ -1558,6 +1556,12 @@ table tbody tr th {
   footer #footer-container #footer-text {
     position: relative;
     top: -9em;
+  }
+}
+@media only screen and (min-width: 600px) {
+  /* 600 =================================================== */
+  .content-container .location .location-desc {
+    display: block;
   }
 }
 @media only screen and (min-width: 768px) {
