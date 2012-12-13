@@ -27,8 +27,8 @@ $(document).ready(function() {
 			} else if (this_viewport == "l") {
 				viewportLarge();
 			}
-			
 		}
+		
 	}
 	
 	setUpMenuNav();	
@@ -192,6 +192,5 @@ function viewportLarge() {
 	$(".menu-action").remove();
 
 }
-
 
 

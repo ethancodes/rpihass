@@ -110,11 +110,10 @@ header #main-nav {
 }
 
 .content-container {
-	padding: 2% 6.25%;
+	padding: 2% 6.25% 275px;
 	background-image: url(../images/content_bg.jpg);
 	background-position: top right;
 	background-repeat: no-repeat;
-	min-height: 1100px;
 	
 	h1 {
 		font-size: 48px;
@@ -190,6 +189,16 @@ header #main-nav {
 
 
 
+#gallery-container {
+	clear: none;
+	float: right;
+	width: 26.5625%;
+	margin-top: 0;
+	padding-top: 0;
+}
+
+
+
 
 
 
@@ -199,26 +208,27 @@ header #main-nav {
 footer {
 	clear: both;
 	position: relative;
-	padding-top: 9em;
-	padding-bottom: 9em;
+	padding: 275px 0 0 0;
 	font-size: 16px;
 	line-height: 24px;
+	margin-top: -275px;
 	
-	background-image: url(../images/footer_bg.jpg);
+	background-color: transparent;
+	background-image: url(../images/footer_bg.png);
 	background-position: top right;
 	background-repeat: no-repeat;
 	
 	.logo {
 		position: absolute;
-		bottom: 10%;
-		left: 6.25%;
+		bottom: -40%;
+		left: 0;
 		margin: 0;
 	}
 	
 	.legal {
 		position: absolute;
-		bottom: 10%;
-		right: 6.25%;
+		bottom: -40%;
+		right: 0;
 	}
 	
 	a,
@@ -227,6 +237,17 @@ footer {
 	p.legal {
 		font-size: 16px;
 		line-height: 24px;
+	}
+	
+	#footer-container {
+		background-color: black;
+		padding: 0 6.25%;
+		
+		#footer-text {
+			position: relative;
+			top: -9em;
+		}
+		
 	}
 	
 }
