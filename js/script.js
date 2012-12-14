@@ -121,6 +121,7 @@ function kickViewports() {
 	
 	if (this_viewport == 'l') {
 		resizeHeader();
+		placeContact();
 	}
 }
 
@@ -219,7 +220,6 @@ function viewportLarge() {
 	$("#main-nav li:not(.active) ul").hide();
 	$(".menu-action").remove();
 	resizeHeader();
-
 }
 
 
@@ -228,10 +228,25 @@ function viewportLarge() {
  */
 function resizeHeader() {
 	var mh = $("#main-nav ul:eq(0) li.first ul").outerHeight();
-	window.document.title = mh.toString();
-	var diff = mh - 250;
-	if (mh > 0) {
+	var hh = parseInt($('header').css('min-height'));
+	if (hh > 0) { } else { hh = 250; }
+//	window.document.title = mh.toString();
+//	window.document.title = hh.toString();
+	var diff = mh - hh;
+//	window.document.title = diff.toString();
+	if (diff > 0) {
 		$("header").css('height', mh.toString() + "px");
 	}
+}
+
+
+/*
+ * Try to place the "contact" link appropriately.
+ * Can't believe how ridiculously complicated this is.
+ */
+function placeContact() {
+	var mntop = $("#main-nav").position().top;
+	var mnh = $("#main-nav ul:eq(0)").outerHeight();
+	$("#contact").css("top", (mntop + mnh + 10).toString() + "px");
 }
 

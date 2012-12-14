@@ -132,6 +132,9 @@ body {
   line-height: 1.5em;
   color: #000000;
 }
+.large-only {
+  display: none;
+}
 header {
   background-color: black;
   color: white;
@@ -652,25 +655,25 @@ header #main-nav ul ul .menu-action {
 /*
  * PAGE NAV
  */
-div.page-link {
+#page-header #page-nav-container div.page-link {
   text-align: center;
   font-size: 10px;
   line-height: 11px;
 }
-div.page-link a {
+#page-header #page-nav-container div.page-link a {
   color: #f4e71a;
   font-size: 10px;
   line-height: 11px;
   font-weight: bold;
   text-decoration: none;
 }
-div.page-link a:hover {
+#page-header #page-nav-container div.page-link a:hover {
   color: white;
 }
-div.page-link-out a {
+#page-header #page-nav-container div.page-link-out a {
   color: #f7001f;
 }
-div.page-link-out a:hover {
+#page-header #page-nav-container div.page-link-out a:hover {
   color: white;
 }
 /* BREADCRUMBS */
@@ -844,7 +847,7 @@ header #contact a:hover {
   color: white;
 }
 header #ident-wrapper {
-  background: #ffffff url(../images/bg_ident.png) 0 47px repeat-x;
+  background: #ffffff url(../images/ident_bg.jpg) 0 31px repeat-x;
 }
 header #ident-wrapper #ident-top {
   color: white;
@@ -1373,17 +1376,61 @@ table tbody + tbody {
     max-width: 1024px;
     margin: 0 auto;
   }
+  .large-only {
+    display: block;
+  }
   header {
     background: #000000 url(../images/header_bgs/header_bg_violet.jpg) bottom right no-repeat;
-    background-size: 100%;
     min-height: 250px;
     overflow: hidden;
+  }
+  header #ident-wrapper {
+    width: 170px;
+    height: 170px;
+    -moz-border-radius: 85px;
+    -webkit-border-radius: 85px;
+    border-radius: 85px;
+  }
+  header #ident-wrapper #ident-top,
+  header #ident-wrapper #ident-top a {
+    font-size: 14px;
+  }
+  header #ident-wrapper #ident-bottom {
+    font-size: 18px;
+    line-height: 19px;
+  }
+  body.home header {
+    min-height: 584px;
+    background: #000000 url(../images/header_bgs/home_large_violet.jpg) bottom right no-repeat;
+  }
+  body.home header #ident-wrapper {
+    width: 340px;
+    height: 340px;
+    -moz-border-radius: 170px;
+    -webkit-border-radius: 170px;
+    border-radius: 170px;
+    background-position: 0 115px;
+    top: -115px;
+  }
+  body.home header #ident-wrapper #ident-top {
+    margin-top: 90px;
+  }
+  body.home header #ident-wrapper #ident-top,
+  body.home header #ident-wrapper #ident-top a {
+    font-size: 18px;
+  }
+  body.home header #ident-wrapper #ident-bottom {
+    font-size: 38px;
+    line-height: 42px;
+    padding-top: 25px;
   }
   header #contact {
     float: none;
     position: absolute;
-    bottom: 25px;
     left: 27px;
+  }
+  header #contact a {
+    font-size: 12px;
   }
   header #icons {
     float: none;
@@ -1449,6 +1496,21 @@ table tbody + tbody {
   }
   header #main-nav .menu-action {
     display: none;
+  }
+  #page-header .page-header-image {
+    display: none;
+  }
+  #page-header #page-nav-container div.page-link {
+    width: 11.5%;
+  }
+  #page-header #page-nav-container div.page-link a {
+    font-size: 18px;
+    line-height: 19px;
+  }
+  #page-header #page-nav-container div.sep {
+    background-image: url(../images/header_nav_sep_large.jpg);
+    min-height: 38px;
+    width: 2.5%;
   }
   /* ACTUAL CONTENT STUFF */
   #breadcrumb {
