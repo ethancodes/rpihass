@@ -64,6 +64,31 @@ $(document).ready(function() {
 
 	}
 	
+	
+	// svg curves, if your browser supports that
+	if ($('html').hasClass('svg') && $('body').hasClass('home')) {
+		
+		var curve = '<div style="height:50px;width:100%;background-color:#D1D2D4;" >';
+		curve += '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 600 50" preserveAspectRatio="none" width="100%" height="100%">';
+		curve += '<path id="quadcurveABC" d="M 5 0 q 300 50 595 0" stroke-width="0" fill="#E5E5E5" />';
+		curve += '</svg>';
+		curve += '</div>';
+		
+		$('.dark-gray-section.concave').before(curve);
+
+		curve = '<div style="height:50px;width:100%;background-color:#D1D2D4;" >';
+		curve += '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 600 50" preserveAspectRatio="none" width="100%" height="100%">';
+		curve += '<path id="quadcurveABC" d="M 5 50 q 300 -50 595 0" stroke-width="0" fill="black" />';
+		curve += '</svg>';
+		curve += '</div>';
+		
+		$('.black-section.convex').before(curve);
+
+		
+	}
+	
+	
+	
 	/*
 	// skew things, if your browser supports that
 	if ($('html').hasClass('csstransforms')) {		

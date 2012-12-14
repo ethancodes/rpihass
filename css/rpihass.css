@@ -1542,13 +1542,6 @@ table tbody tr th {
     bottom: -40%;
     right: 0;
   }
-  footer a,
-  footer p,
-  footer p.headline,
-  footer p.legal {
-    font-size: 16px;
-    line-height: 24px;
-  }
   footer #footer-container {
     background-color: black;
     padding: 0 6.25%;
@@ -1578,6 +1571,13 @@ table tbody tr th {
   header #main-nav ul li.active ul a {
     font-size: 14px;
     line-height: 16px;
+  }
+  footer a,
+  footer p,
+  footer p.headline,
+  footer p.legal {
+    font-size: 16px;
+    line-height: 24px;
   }
   .content-container .location {
     float: left;
