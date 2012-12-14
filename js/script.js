@@ -4,31 +4,10 @@ var last_viewport = '';
 
 $(document).ready(function() {
 
-	var viewport = $(window).width();
-	if (viewport < 570) {
-		this_viewport = 's';
-	} else {
-		this_viewport = 'l';
-	}
-	if (this_viewport != last_viewport) last_viewport = this_viewport;
+	kickViewports();
 
 	window.onresize = function(e) {
-		var viewport = $(window).width();
-		if (viewport < 570) {
-			this_viewport = 's';
-		} else {
-			this_viewport = 'l';
-		}
-		if (this_viewport != last_viewport) {
-			last_viewport = this_viewport;
-			
-			if (this_viewport == "s") {
-				viewportSmall();
-			} else if (this_viewport == "l") {
-				viewportLarge();
-			}
-		}
-		
+		kickViewports();		
 	}
 	
 	setUpMenuNav();	
@@ -123,6 +102,29 @@ $(document).ready(function() {
 });
 
 
+function kickViewports() {
+	var viewport = $(window).width();
+	if (viewport < 570) {
+		this_viewport = 's';
+	} else {
+		this_viewport = 'l';
+	}
+	if (this_viewport != last_viewport) {
+		last_viewport = this_viewport;
+		
+		if (this_viewport == "s") {
+			viewportSmall();
+		} else if (this_viewport == "l") {
+			viewportLarge();
+		}
+	}
+	
+	if (this_viewport == 'l') {
+		resizeHeader();
+	}
+}
+
+
 // figure out how big the images are
 // figure out the dimensions of innerShell
 // figure out how far to space them apart
@@ -204,6 +206,7 @@ function setUpMenuNav() {
  */
 function viewportSmall() {
 	setUpMenuNav();
+	$("header").css("height", "auto");
 }
 
 
@@ -215,7 +218,20 @@ function viewportLarge() {
 //	alert('switching to large');
 	$("#main-nav li:not(.active) ul").hide();
 	$(".menu-action").remove();
+	resizeHeader();
 
 }
 
+
+/*
+ * Resize the height of the header around the menu.
+ */
+function resizeHeader() {
+	var mh = $("#main-nav ul:eq(0) li.first ul").outerHeight();
+	window.document.title = mh.toString();
+	var diff = mh - 250;
+	if (mh > 0) {
+		$("header").css('height', mh.toString() + "px");
+	}
+}
 

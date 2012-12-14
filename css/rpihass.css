@@ -709,11 +709,24 @@ div.page-link-out a:hover {
 .content-container h2.light {
   color: #bcbec0;
 }
+.content-container h3 {
+  font-size: 20px;
+  line-height: 24px;
+}
 .content-container h4 {
   font-size: 16px;
   line-height: 20px;
   color: #414042;
   font-weight: bold;
+}
+.content-container h5 {
+  font-size: 16px;
+  line-height: 20px;
+  color: #414042;
+}
+.content-container h6 {
+  font-size: 16px;
+  line-height: 20px;
 }
 .content-container .highlight {
   font-weight: bold;
@@ -1241,6 +1254,10 @@ table {
   /* background-color : @tablebackground; */
 
   /*
+tbody tr td,
+tbody tr th {
+.transition(background-color .25s 0 linear); }
+
 tbody tr:hover td,
 tbody tr:hover th {
 background-color : @tablehover; }
@@ -1272,14 +1289,6 @@ table thead:first-child tr:first-child td {
 }
 table tbody + tbody {
   border-top: 2px solid #8c9bab;
-}
-table tbody tr td,
-table tbody tr th {
-  -webkit-transition: background-color 0.25s 0 linear;
-  -moz-transition: background-color 0.25s 0 linear;
-  -ms-transition: background-color 0.25s 0 linear;
-  -o-transition: background-color 0.25s 0 linear;
-  transition: background-color 0.25s 0 linear;
 }
 .table-condensed th,
 .table-condensed td {
@@ -1365,21 +1374,22 @@ table tbody tr th {
     margin: 0 auto;
   }
   header {
-    background: #000000 url(../images/header_bgs/header_bg_violet.jpg) bottom left no-repeat;
+    background: #000000 url(../images/header_bgs/header_bg_violet.jpg) bottom right no-repeat;
     background-size: 100%;
     min-height: 250px;
+    overflow: hidden;
   }
   header #contact {
     float: none;
     position: absolute;
-    top: 245px;
+    bottom: 25px;
     left: 27px;
   }
   header #icons {
     float: none;
     position: absolute;
-    top: 10px;
-    right: 15px;
+    top: 2.5%;
+    right: 1%;
     margin: 0;
   }
   header #icons #icon-home {
@@ -1419,13 +1429,13 @@ table tbody tr th {
   }
   header #main-nav ul li.active ul li {
     width: 100%;
-    padding-left: 28px;
+    padding-left: 10%;
   }
   header #main-nav ul li.active ul li.first {
     margin-top: 0;
   }
   header #main-nav ul li.active ul li.active {
-    background-position: 8px 5px;
+    background-position: 2% 5px;
     /* third level / column */
   
   }
@@ -1433,6 +1443,9 @@ table tbody tr th {
     left: 100%;
     width: 100%;
     height: 100%;
+  }
+  header #main-nav ul li.active ul li.active ul li {
+    width: 75%;
   }
   header #main-nav .menu-action {
     display: none;
@@ -1451,11 +1464,18 @@ table tbody tr th {
     background-position: top right;
     background-repeat: no-repeat;
   }
-  .content-container h1 {
+  .content-container h1,
+  .content-container h2 {
     font-size: 48px;
     line-height: 52px;
   }
+  .content-container h3 {
+    font-size: 30px;
+    line-height: 36px;
+  }
   .content-container h4,
+  .content-container h5,
+  .content-container h6,
   .content-container a.call-to-action {
     font-size: 22px;
     line-height: 24px;
