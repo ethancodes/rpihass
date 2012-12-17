@@ -40,30 +40,57 @@ pre {
 	</p>
 
 	<p>
-		<strong>Fonts.</strong> We're using "Gotham" and "Gotham Rounded." We're using <a href="http://www.font-face.com/">@font-face</a> to display them, which is currently defined in less/typography.less.
-		In order to prevent people from "stealing" or linking directly to the font files, the following should be added to .htaccess or something similar.
+		<strong>Fonts.</strong> We're using "Proxima Nova" and "Proxima Nova Soft." We're using <a href="http://www.typekit.com/">TypeKit</a> to display them, which is currently defined in less/typography.less.
 	</p>
 	
-	<pre>&lt;FilesMatch "\.(ttf|otf)$"&gt;
-&lt;IfModule mod_headers.c&gt;
-Header set Access-Control-Allow-Origin "*"
-&lt;/IfModule&gt;
-&lt;/FilesMatch&gt;</pre>	
-		
+	<p>
+		<strong>Images.</strong> Most images have the class "circle." jQuery will add the necessary code to turn that image into a circle, assuming your browser supports those CSS3 features. Thumbnails displayed on the page should be square, though the jQuery will crop them if they are rectangular. Images may link to a larger, non-circular image.
+	</p>
+	
+	<p>
+		<strong>Text styles.</strong> Headings 1 through 6 have been styled, and examples of usage appear on Academics and Bachelors pages. Note that the "highlight" class will handle a paragraph, span, or list item with the bolder, purple font.
+	</p>
+	
 	<hr />
 	
 	<p>
-		<em>Followed by links to the page templates.</em>
+		<strong>Home page.</strong>
+		
+		<br /><a href="home.html">Home Page Template</a>
 	</p>
-	
-	<ul>
-		<li><a href="home.html">Home Page Template</a></li>
-		<li><a href="academics.html">Academics</a></li>
-		<li><a href="bachelors.html">Bachelors of Electronic Arts Page Template</a></li>
-		<li><a href="facilities.html">Facilities</a></li>
-		<li><a href="artgallery.html">Art Gallery</a></li>
-	</ul>
 
+	<hr />
+
+	<p>
+		<strong>Academics.</strong>
+		
+		<br /><a href="academics.html">Academics</a>
+	</p>
+
+	<hr />
+
+	<p>
+		<strong>Bachelors of Electronic Arts.</strong>
+		
+		<br /><a href="bachelors.html">Bachelors of Electronic Arts</a>
+	</p>
+
+	<hr />
+
+	<p>
+		<strong>Facilities.</strong>
+		
+		<br /><a href="facilities.html">Facilities</a>
+	</p>
+
+	<hr />
+
+	<p>
+		<strong>Art Gallery.</strong>
+		
+		<br /><a href="artgallery.html">Art Gallery</a>
+	</p>
+		
 </div>
 
 </body>

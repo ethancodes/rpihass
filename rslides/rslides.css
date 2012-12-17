@@ -39,3 +39,6 @@
 	display: inline;
 	margin: 5px 10px;
 }
+.rslides_tabs li.rslides_here a {
+	color: white;
+}

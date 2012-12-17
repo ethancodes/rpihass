@@ -52,21 +52,6 @@ $(document).ready(function() {
 
 <link rel="stylesheet" href="rslides/rslides.css" />
 <script src="rslides/rslides.min.js"></script>
-<script>
-$(document).ready(function() {
-	$('#carousel').responsiveSlides({
-		auto: false,
-		pager: true,
-		/*
-		nav: true,
-		prevText: "&lt;",
-		nextText: "&gt;"
-		*/
-	});
-});
-</script>
-
-
 
 <link rel="shortcut icon" href="/favicon.ico">
 
@@ -156,23 +141,40 @@ $(document).ready(function() {
 	</div>
 </div>
 
+<div id="magic-overlay-wrapper">
+	<div id="magic-overlay"></div>
+
 <a name="about"></a>
 <div id="main-content-container" class="content-container">
+
 	<h1>
 		About<br />
 		Department<br />
 		of the Arts
 	</h1>
 	
+	<div id="home-content">
 	<p class="highlight">
 		Rensselaer&rsquo;s Department of the Arts is generally considered to be the first integrated electronic arts program within a research university in the United States.
 	</p>
 	
-	<p>
+	<p class="small-only">
 		Founded in 1972, the department initiated the inclusion of electronic Os eos num etur sandi consequi berent et as as mo ea as autatur? 
 		... 
 		<a href="#" class="read-more">MORE</a>
 	</p>
+	
+	<p class="large-only">
+Ad occaecat aesthetic cred, aliqua locavore mixtape. Enim fashion axe trust fund next level nostrud ex, banksy labore wayfarers etsy magna aliqua assumenda keffiyeh. Master cleanse small batch thundercats, semiotics lo-fi reprehenderit ut odio truffaut cardigan church-key commodo. Bicycle rights minim qui irure pitchfork polaroid, dolor ethnic magna fugiat vero aliquip flexitarian fap direct trade. Art party shoreditch typewriter, small batch kogi accusamus laboris irure vero master cleanse voluptate Austin aliqua. Officia gentrify forage est. 90's jean shorts occupy butcher aesthetic.
+	</p>
+
+	<p class="large-only">
+Vice irure hella blue bottle, VHS master cleanse fap. Cosby sweater etsy aute, dolor qui vegan occaecat sed yr gastropub mixtape. Bicycle rights portland Austin occupy sustainable american apparel put a bird on it next level, aesthetic mlkshk. High life truffaut keytar skateboard mustache yr. Portland cillum gluten-free, anim pitchfork small batch ea ullamco carles VHS aute tousled pork belly. Iphone nostrud qui commodo pour-over. Salvia carles nulla, brooklyn odio velit nisi next level high life anim non officia sustainable art party
+		... 
+		<a href="#" class="read-more">MORE</a>
+	</p>
+	</div>
+	
 
 </div>
 
@@ -181,22 +183,43 @@ $(document).ready(function() {
 <div id="news" class="dark-gray-section concave content-container">
 	<h2>Featured News</h2>
 	
-	<p class="news-item">
+	<p class="news-item first">
 		<span class="highlight">Interview with Larry Kagan</span><br />
+		<span class="small-only">
 		An interview with Professor Larry Kagan from ArtSync on Vimeo. <a href="#">FULL STORY</a>
+		</span>
+		<span class="large-only">
+		<img src="http://placekitten.com/g/82/82" height="82" width="82" alt="Larry Kagan" class="circle" />
+Ad occaecat aesthetic cred, aliqua locavore mixtape. Enim fashion axe trust fund next level nostrud ex, banksy labore wayfarers etsy magna aliqua assumenda keffiyeh. Master cleanse small batch thundercats, semiotics lo-fi reprehenderit ut odio truffaut cardigan church-key commodo. 
+		<br /><a href="#">FULL STORY</a>
+		</span>		
 	</p>
 	
 	<p class="news-item">
 		<span class="highlight">GameFest 2012 at Rensselaer Expands to a Regional Reach</span><br />
+		<span class="small-only">
 		Get ready for the biggest GameFest yet, as the annual ... <a href="#">FULL STORY</a>
+		</span>		
+		<span class="large-only">
+Bicycle rights minim qui irure pitchfork polaroid, dolor ethnic magna fugiat vero aliquip flexitarian fap direct trade. Art party shoreditch typewriter, small batch kogi accusamus laboris irure vero master cleanse voluptate Austin aliqua. Officia gentrify forage est. 90's jean shorts occupy butcher aesthetic. 
+		<br /><a href="#">FULL STORY</a>
+		</span>		
 	</p>
 	
-	<p class="news-item">
+	<p class="news-item last">
 		<span class="highlight">Temperro est mod et laborro mos et doloribuste mo</span><br />
+		<span class="small-only">
 		Volut res dem et et fugiatur. Ipsumet atis maximagnis ... <a href="#">FULL STORY</a>
+		</span>		
+		<span class="large-only">
+Vice irure hella blue bottle, VHS master cleanse fap. Cosby sweater etsy aute, dolor qui vegan occaecat sed yr gastropub mixtape. 
+		<br /><a href="#">FULL STORY</a>
+		</span>		
 	</p>
 
 </div>
+
+</div><!-- close magic-overlay-wrapper -->
 
 <a name="media"></a>
 <div id="media" class="black-section convex content-container">
@@ -205,17 +228,18 @@ $(document).ready(function() {
 		Gallery
 	</h2>
 	
-	<ul id="carousel" class="elastislide-list">
+	<ul id="carousel" class="column-5">
 		<li><a href="#"><img src="images/home_slider/a.jpg" alt="a" /></a></li>
-		<li><a href="#"><img src="images/home_slider/b.jpg" alt="b" /></a></li>
+		<li><a href="#"><img src="images/home_slider/b.jpg" alt="b" class="overlay-video" /></a></li>
 		<li><a href="#"><img src="images/home_slider/c.jpg" alt="c" /></a></li>
 		<li><a href="#"><img src="images/home_slider/d.jpg" alt="d" /></a></li>
-		<li><a href="#"><img src="images/home_slider/e.jpg" alt="e" /></a></li>
+		<li><a href="#"><img src="images/home_slider/e.jpg" alt="e" class="overlay-audio" /></a></li>
 	</ul>
 </div>
 
 
 <footer>
+	<div id="footer-container"><div id="footer-text">
 	<p class="headline">Department of the Arts</p>
 	<p class="headline">General Inquiries</p>
 	<p><a href="mailto:electronicarts@rpi.edu">electronicarts@rpi.edu</a></p>
@@ -240,6 +264,7 @@ $(document).ready(function() {
 		Copyright 2012 Rensselaer<br />
 		Polytechnic Institute (RPI). All rights reserved.
 	</p>
+	</div></div>
 	
 </footer>
 

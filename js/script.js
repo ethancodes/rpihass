@@ -208,6 +208,7 @@ function setUpMenuNav() {
 function viewportSmall() {
 	setUpMenuNav();
 	$("header").css("height", "auto");
+	homeMediaSmall();
 }
 
 
@@ -220,6 +221,7 @@ function viewportLarge() {
 	$("#main-nav li:not(.active) ul").hide();
 	$(".menu-action").remove();
 	resizeHeader();
+	homeMediaLarge();
 }
 
 
@@ -248,5 +250,45 @@ function placeContact() {
 	var mntop = $("#main-nav").position().top;
 	var mnh = $("#main-nav ul:eq(0)").outerHeight();
 	$("#contact").css("top", (mntop + mnh + 10).toString() + "px");
+}
+
+
+/*
+ * Set up the slideshow. Apparently only for small.
+ */
+function homeMediaSmall() {
+	if (!$("body").hasClass("home")) return false;
+	$(document).ready(function() {	
+		$('#carousel').responsiveSlides({
+			auto: false,
+			pager: true,
+			/*
+			nav: true,
+			prevText: "&lt;",
+			nextText: "&gt;"
+			*/
+		});
+				
+	});
+}
+
+
+/*
+ * Gallery, for large.
+ */
+function homeMediaLarge() {
+	if (!$("body").hasClass("home")) return false;
+	$(document).ready(function() {	
+		
+		$('#carousel .overlay-video').each(function() {
+			$(this).parent().css('position', 'relative').css('display', 'block');
+			$(this).before('<span class="go-overlay-media go-overlay-video"></span>');
+		});
+		$('#carousel .overlay-audio').each(function() {
+			$(this).parent().css('position', 'relative').css('display', 'block');
+			$(this).before('<span class="go-overlay-media go-overlay-audio"></span>');
+		});
+		
+	});
 }
 
