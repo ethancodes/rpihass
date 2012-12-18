@@ -67,6 +67,37 @@ $(document).ready(function() {
 	}
 	
 	
+	/**
+	 * meant to handle div.collapsible
+	 * will can contain any number of paragraphs (or whatever)
+	 * will create a "preview" and a MORE link and hide everything that isn't the preview
+	 * clicking on the MORE link will review the hidden text
+	 *
+	 * first paragraph will be the preview
+	 */
+	$(".collapsible").each(function() {
+	
+		$(".collapsible p:eq(0)").append('<span class="collapsible-more-wrapper"> ... <a href="#" class="collapsible-more">MORE</a></span>');
+	
+		$(".collapsible p:gt(0)").wrapAll('<div class="collapsible-wrapper"></div>');
+		$(".collapsible-wrapper p:last-child").append('<span class="collapsible-more-wrapper"> ... <a href="#" class="collapsible-more">LESS</a></span>');
+		$(".collapsible-wrapper").hide();		
+
+		$(".collapsible-more").on("click", function(e) {
+			e.preventDefault();
+			var t = $(this).html();
+			if (t == "MORE") {
+				$(this).parent().parent().siblings(".collapsible-wrapper").slideDown();
+				$(this).parent().hide();
+			} else {
+				$(this).parent().parent().parent().siblings("p").children(".collapsible-more-wrapper").show();
+				$(this).parent().parent().parent().slideUp();
+			}
+		});
+	
+	})
+	
+	
 	
 	/*
 	// skew things, if your browser supports that
@@ -84,18 +115,6 @@ $(document).ready(function() {
 		
 	}
 	*/
-	
-	// magically center things
-	$('.jscenter').each(function() {
-		var child_width = 0;
-		$(this).children().each(function() {
-			child_width += $(this).width();
-		});
-		if (child_width > 0) {
-			$(this).css('width', child_width.toString() + "px").css('margin', '0 auto');
-		}
-		
-	});	
 	
 	
 

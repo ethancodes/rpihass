@@ -51,44 +51,100 @@ pre {
 		<strong>Text styles.</strong> Headings 1 through 6 have been styled, and examples of usage appear on Academics and Bachelors pages. Note that the "highlight" class will handle a paragraph, span, or list item with the bolder, purple font.
 	</p>
 	
+	<p>
+		<strong>Responsive.</strong> There are two sizes defined. Small applies to devices, or browser windows, smaller than 570 pixels in width. Large applies to sizes above 570. The largest size is 1024 pixels, though this can be adjusted.
+	</p>
+	
 	<hr />
 	
+	<h3>Home page</h3>
+	
 	<p>
-		<strong>Home page.</strong>
-		
-		<br /><a href="home.html">Home Page Template</a>
+		There are two different images used for the header. Because the small size uses a rectangular image, you can produce a small version for the size. In our templates this has been provided at 570px wide, to accommodate the largest possible small size. The large size requires a much larger image, which is provided at 1024px, and displayed differently.
+	</p>
+	
+	<p>
+		The horizontal menu is intended to have five items. The first three are intended to link to parts of the same page, as provided in the example. The other two are designated with the "page-link-out" class. These are styled differently, and are intended to link to other pages. At the small size, the last item is hidden. The is done with the "large-only" class, which can be used in other places and is explained further later on.
+	</p>
+	
+	<p>
+		The body copy of this page is collapsible. If you wrap paragraphs (etc) with a div that has the "collapsible" class, jQuery will take care of this. The first paragraph is used as preview text, and the "... MORE" is added automatically. When you click on MORE it displays the rest of the text. You can use this "collapsible" structure on other pages as well.
+	</p>
+	
+	<p>
+		The news will display three items, but their layout varies for "small" and "large" sizes. Small screens display these items in a single column, large screens display these items in three columns. You can vary the text displayed using spans with "small-only" and "large-only" classes. In this example you can see that on small screens we display less text, and large screens have more text; one of them has a photo as well. Again, you can use the "small-only" and "large-only" classes on almost anything, anywhere.
+	</p>
+	
+	<p>
+		The media gallery displays very differently depending on the screen width. Small sizes see one thumbnail at a time, and paging items are automatically added with a jQuery slideshow plugin. Large screens display everything in what was designed as a grid. This example displays five items in one row, and you could easily add five or ten more photos to keep this layout looking nice. You may notice that the ul which contains the images has the class "column-5." This is what determines the number of columns these images are displayed in. I've built "column-4" and "column-3" as well, in order to make it easier to keep the grid layout. If you have 12 photos, "column-4" would produce 3 rows of 4 and keep it nice looking. Also notice that some items have classes "overlay-video" or "overlay-audio." Graphics are automatically added to these items to make it clear to the user that this item is a video or audio file.
+	</p>
+	
+	<p>
+		<a href="home.html">Home Page Template</a>
 	</p>
 
 	<hr />
 
+	<h3>Academics</h3>
+	
 	<p>
-		<strong>Academics.</strong>
-		
-		<br /><a href="academics.html">Academics</a>
+		This page is actually pretty straight-forward. Also a good example of text styles. Images in the right column only appear at larger sizes.
+	</p>
+
+	<p>
+		<a href="academics.html">Academics</a>
 	</p>
 
 	<hr />
 
+	<h3>Bachelors of Electronic Arts</h3>
+	
 	<p>
-		<strong>Bachelors of Electronic Arts.</strong>
-		
-		<br /><a href="bachelors.html">Bachelors of Electronic Arts</a>
+		Fairly complicated navigation. Note that at small sizes it appears as an unordered list, which is expandable/collapsible; at larger sizes it appears as columns. I have tried to make this as flexible as possible, to accommodate longer link titles and more/fewer link items.
+	</p>
+	
+	<p>
+		Also have the Student Profile on this page. At small sizes you see circles, which link to the actual content lower on the page. This technique can be used in other places, if necessary.
+	</p>
+	
+	<p>
+		A lot more text styles on this page, some of them rather specific.
+	</p>
+
+	<p>
+		<a href="bachelors.html">Bachelors of Electronic Arts</a>
 	</p>
 
 	<hr />
 
+	<h3>Facilities</h3>
+	
 	<p>
-		<strong>Facilities.</strong>
-		
-		<br /><a href="facilities.html">Facilities</a>
+		The layout of this page changes dramatically depending on screen width. At smaller sizes you have a single column list with the image, title, and location of each facility. At larger sizes these move to two columns, and each includes a text paragraph as description copy.
+	</p>
+	
+	<p>
+	This is one example of content which I have put into a sort of middle ground between small and large sizes. If you have a browser window larger than 570 (which would qualify as "large") but smaller than 768, the two column layout doesn't work well. In this situation you'll see it's a single column, even though the page is otherwise displaying as "large." I've done this with an additional stylesheet, you'll find in less/768.less. What this means is that while the "large" stylesheet takes over at 570px, certain items on the facilities page are not changed until the screen is wider than 768px. I've only had to do this on a few small things, but if necessary this technique could be used on other things.
+	</p>
+
+	<p>
+		<a href="facilities.html">Facilities</a>
 	</p>
 
 	<hr />
 
+	<h3>Art Gallery</h3>
+	
 	<p>
-		<strong>Art Gallery.</strong>
-		
-		<br /><a href="artgallery.html">Art Gallery</a>
+		This page includes a large, circular photo. The design offers the option to include three smaller thumbnails beneath it. At small screen sizes this appears before the content, and at larger screen sizes this appears to the right of the content.
+	</p>
+	
+	<p>
+		The thumbnails are a tricky issue. Because of the layout, you cannot put more than three thumbnails there. Obviously putting one thumbnail would be pointless, and two would be only slightly more helpful. You may want to put more than three, and if this happens the best recommendation is to put them on a second (or third, etc) row.
+	</p>
+
+	<p>
+		<a href="artgallery.html">Art Gallery</a>
 	</p>
 		
 </div>

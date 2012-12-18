@@ -1581,6 +1581,9 @@ table tbody + tbody {
     background-position: top right;
     background-repeat: no-repeat;
   }
+  body.artgallery #main-content-container {
+    padding-top: 2%;
+  }
   .content-split {
     float: left;
     width: 70%;
@@ -1636,15 +1639,6 @@ table tbody + tbody {
     font-size: 15px;
     line-height: 23px;
   }
-  /*
-  #gallery-container {
-  	clear: none;
-  	float: right;
-  	width: 26.5625%;
-  	margin-top: 0;
-  	padding-top: 0;
-  }
-  */
   /**
    * MEDIA GALLERY
    */
@@ -1685,6 +1679,14 @@ table tbody + tbody {
   }
   body.home .go-overlay-audio {
     background-image: url(../images/media_audio.png);
+  }
+  /* ART GALLERY */
+  #gallery-container {
+    clear: none;
+    float: right;
+    width: 26.5625%;
+    margin-top: 0;
+    padding-top: 0;
   }
   /**
    * FOOTER
