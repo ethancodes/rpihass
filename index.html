@@ -7,9 +7,11 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: Courier, monospace, sans-serif;
+	line-height: 1.25em;
 }
 #layout {
 	width: 50%;
+	max-width: 600px;
 	margin: 10% auto;
 }
 a {
@@ -23,6 +25,10 @@ pre {
 	background: #d0d0d0;
 	padding: 2em;
 }
+.code {
+	background-color: #e0e0e0;
+	padding: 0.1em;
+}
 </style>
 </head>
 <body>
@@ -30,29 +36,51 @@ pre {
 <div id="layout">
 
 	<h1>RPI HASS</h1>
+	
+	<p>
+		<strong>@todo</strong>
+	</p>
+	<ul>
+		<li>Browser testing</li>
+		<li>General code clean up</li>
+		<li>Nix <span class="code">fonts</span> directory</li>
+		<li>Nix <span class="code">Elastislide</span> directory</li>
+		<li>Nix skew files</li>
+		<li>Remove or document <span class="code">graduatesub.html</span></li>
+	</ul>
+	
+	<hr />
 		
 	<p>
-		We're building templates for 6 pages.
+		We're building templates for 5 pages.
 		These page templates are "responsive," meaning that the appearance we change based on width of the device, whether it's a massive desktop computer, a tablet, or a phone.
 		We are building "mobile first," meaning that we're starting with the small sizes and laying out the basics of HTML structure and CSS elements.
 		We're using <a href="http://stuffandnonsense.co.uk/projects/320andup/">320 and Up</a>.
-		You should be familiar with HTML(5), CSS/LESS, and jQuery.
+		You should be familiar with HTML(5), CSS/LESS, and Javascript/jQuery.
 	</p>
 
 	<p>
-		<strong>Fonts.</strong> We're using "Proxima Nova" and "Proxima Nova Soft." We're using <a href="http://www.typekit.com/">TypeKit</a> to display them, which is currently defined in less/typography.less.
+		<strong>Fonts.</strong> We're using <a href="http://www.typekit.com/">TypeKit</a> to display "Proxima Nova" and "Proxima Nova Soft." These are currently defined in <span class="code">less/variables.less</span> and <span class="code">less/typography.less</span>.
 	</p>
 	
 	<p>
-		<strong>Images.</strong> Most images have the class "circle." jQuery will add the necessary code to turn that image into a circle, assuming your browser supports those CSS3 features. Thumbnails displayed on the page should be square, though the jQuery will crop them if they are rectangular. Images may link to a larger, non-circular image.
+		<strong>Images.</strong> Most images have the class <span class="code">circle</span>. jQuery will add the necessary code to turn that image into a circle, assuming your browser supports those CSS3 features. Thumbnails displayed on the page should be square, though the jQuery will crop them if they are rectangular. Images may link to a larger, non-circular image.
 	</p>
 	
 	<p>
-		<strong>Text styles.</strong> Headings 1 through 6 have been styled, and examples of usage appear on Academics and Bachelors pages. Note that the "highlight" class will handle a paragraph, span, or list item with the bolder, purple font.
+		<strong>Text styles.</strong> Headings 1 through 6 have been styled, and examples of usage appear on Academics and Bachelors pages. Note that the <span class="code">highlight</span> class will handle a paragraph, span, or list item with the bolder, purple font.
 	</p>
 	
 	<p>
-		<strong>Responsive.</strong> There are two sizes defined. Small applies to devices, or browser windows, smaller than 570 pixels in width. Large applies to sizes above 570. The largest size is 1024 pixels, though this can be adjusted.
+		<strong>Colors.</strong> All colors are defined as LESS @variables in <span class="code">less/variables.less</span>. These @variables are used throughout the other .less files, so if you want to change the hex code of @rpipurple, you can do that in one place instead of who-knows-how-many. This should also make it easier to make large changes for certain groups of pages. For example, using <span class="code">@rpideptcolor</span>, and setting <span class="code">@rpideptcolor: @rpipurple</span> in one <span class="code">.less</span> file means you can easily set <span class="code">@rpideptcolor: @rpiteal</span> in another.
+	</p>
+	
+	<p>
+		<strong>Responsive.</strong> There are two sizes defined. Small applies to devices, or browser windows, smaller than 570 pixels in width. Large applies to sizes above 570. The largest size is 1020 pixels, though this can be adjusted.
+	</p>
+	
+	<p>
+		<strong>Pages.</strong> Each page has class added to the <span class="code">body</span> tag. This helps tweak styling and add functionality for specific pages.
 	</p>
 	
 	<hr />
@@ -64,19 +92,19 @@ pre {
 	</p>
 	
 	<p>
-		The horizontal menu is intended to have five items. The first three are intended to link to parts of the same page, as provided in the example. The other two are designated with the "page-link-out" class. These are styled differently, and are intended to link to other pages. At the small size, the last item is hidden. The is done with the "large-only" class, which can be used in other places and is explained further later on.
+		The horizontal menu is intended to have five items. The first three are intended to link to parts of the same page, as provided in the example. The other two are designated with the <span class="code">page-link-out</span> class. These are styled differently, and are intended to link to other pages. At the small size, the last item is hidden. This is done with the <span class="code">large-only</span> class, which can be used in other places and is explained further later on.
 	</p>
 	
 	<p>
-		The body copy of this page is collapsible. If you wrap paragraphs (etc) with a div that has the "collapsible" class, jQuery will take care of this. The first paragraph is used as preview text, and the "... MORE" is added automatically. When you click on MORE it displays the rest of the text. You can use this "collapsible" structure on other pages as well.
+		The body copy of this page is collapsible. If you wrap paragraphs (etc) with a div that has the <span class="code">collapsible</span> class, jQuery will take care of this. The first paragraph is used as preview text, and the "... MORE" is added automatically. When you click on MORE it displays the rest of the text. You can use this <span class="code">collapsible</span> structure on other pages as well.
 	</p>
 	
 	<p>
-		The news will display three items, but their layout varies for "small" and "large" sizes. Small screens display these items in a single column, large screens display these items in three columns. You can vary the text displayed using spans with "small-only" and "large-only" classes. In this example you can see that on small screens we display less text, and large screens have more text; one of them has a photo as well. Again, you can use the "small-only" and "large-only" classes on almost anything, anywhere.
+		The news will display three items, but their layout varies for "small" and "large" sizes. Small screens display these items in a single column, large screens display these items in three columns. You can vary the text displayed using spans with <span class="code">small-only</span> and <span class="code">large-only</span> classes. In this example you can see that on small screens we display less text, and large screens have more text; one of them has a photo as well. Again, you can use the <span class="code">small-only</span> and <span class="code">large-only</span> classes on almost anything, anywhere.
 	</p>
 	
 	<p>
-		The media gallery displays very differently depending on the screen width. Small sizes see one thumbnail at a time, and paging items are automatically added with a jQuery slideshow plugin. Large screens display everything in what was designed as a grid. This example displays five items in one row, and you could easily add five or ten more photos to keep this layout looking nice. You may notice that the ul which contains the images has the class "column-5." This is what determines the number of columns these images are displayed in. I've built "column-4" and "column-3" as well, in order to make it easier to keep the grid layout. If you have 12 photos, "column-4" would produce 3 rows of 4 and keep it nice looking. Also notice that some items have classes "overlay-video" or "overlay-audio." Graphics are automatically added to these items to make it clear to the user that this item is a video or audio file.
+		The media gallery displays very differently depending on the screen width. Small sizes see one thumbnail at a time, and paging items are automatically added with a jQuery slideshow plugin. Large screens display everything in what was designed as a grid. This example displays five items in one row, and you could easily add five or ten more photos to keep this layout looking nice. You may notice that the ul which contains the images has the class <span class="code">column-5</span>. This is what determines the number of columns these images are displayed in. I've built <span class="code">column-4</span> and <span class="code">column-3</span> as well, in order to make it easier to keep the grid layout. If you have 12 photos, <span class="code">column-4</span> would produce 3 rows of 4 and keep it nice looking. Also notice that some items have classes <span class="code">overlay-video</span> or <span class="code">overlay-audio</span>. Graphics are automatically added to these items to make it clear to the user that this item is a video or audio file.
 	</p>
 	
 	<p>
@@ -124,7 +152,7 @@ pre {
 	</p>
 	
 	<p>
-	This is one example of content which I have put into a sort of middle ground between small and large sizes. If you have a browser window larger than 570 (which would qualify as "large") but smaller than 768, the two column layout doesn't work well. In this situation you'll see it's a single column, even though the page is otherwise displaying as "large." I've done this with an additional stylesheet, you'll find in less/768.less. What this means is that while the "large" stylesheet takes over at 570px, certain items on the facilities page are not changed until the screen is wider than 768px. I've only had to do this on a few small things, but if necessary this technique could be used on other things.
+	This is one example of content which I have put into a sort of middle ground between small and large sizes. If you have a browser window larger than 570 (which would qualify as "large") but smaller than 768, the two column layout doesn't work well. In this situation you'll see it's a single column, even though the page is otherwise displaying as "large." I've done this with an additional stylesheet, you'll find in <span class="code">less/768.less</span>. What this means is that while the "large" stylesheet takes over at 570px, certain items on the facilities page are not changed until the screen is wider than 768px. I've only had to do this on a few small things, but if necessary this technique could be used on other things.
 	</p>
 
 	<p>
@@ -145,6 +173,24 @@ pre {
 
 	<p>
 		<a href="artgallery.html">Art Gallery</a>
+	</p>
+	
+	<hr />
+	
+	<h3>Specific files</h3>
+	
+	<p>
+		All of the CSS is built with LESS. You will find them (hyper-organized) in the <span class="code">less</span> directory. The only file that stands out as irregular is <span class="code">rpihass-large.less</span> which makes adjustments for screen sizes over 570px. Note that LESS takes all of the <span class="code">.less</span> files and compiles them into a one, clean <span class="code">.css</span> file. I've included the php script I've been using to do this, but the command is 
+		<br />
+		<span class="code">lessc less/rpihass.less > css/rpihass.css</span>.
+	</p>
+	
+	<p>
+		All of the javascript is located in the <span class="code">js</span> directory. Most of the magic happens in <span class="code">script.js</span>.
+	</p>
+	
+	<p>
+		Image files are currently in the <span class="code">images</span> directory. This includes general graphics, images for the headers, and example images used on the home page slider. You may want to organize these by department/color, and depending on the functionality of the CMS being used you may want to move other content-related images to other locations.
 	</p>
 		
 </div>

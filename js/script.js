@@ -10,8 +10,6 @@ $(document).ready(function() {
 		kickViewports();		
 	}
 	
-	setUpMenuNav();	
-	
 	// circle things, if your browser supports that
 	if ($('html').hasClass('borderradius')) {
 		
@@ -236,7 +234,6 @@ function viewportSmall() {
  */
 function viewportLarge() {
 
-//	alert('switching to large');
 	$("#main-nav li:not(.active) ul").hide();
 	$(".menu-action").remove();
 	resizeHeader();
@@ -251,10 +248,7 @@ function resizeHeader() {
 	var mh = $("#main-nav ul:eq(0) li.first ul").outerHeight();
 	var hh = parseInt($('header').css('min-height'));
 	if (hh > 0) { } else { hh = 250; }
-//	window.document.title = mh.toString();
-//	window.document.title = hh.toString();
 	var diff = mh - hh;
-//	window.document.title = diff.toString();
 	if (diff > 0) {
 		$("header").css('height', mh.toString() + "px");
 	}
@@ -273,7 +267,7 @@ function placeContact() {
 
 
 /*
- * Set up the slideshow. Apparently only for small.
+ * Set up the slideshow for small.
  */
 function homeMediaSmall() {
 	if (!$("body").hasClass("home")) return false;
