@@ -93,27 +93,7 @@ $(document).ready(function() {
 			}
 		});
 	
-	})
-	
-	
-	
-	/*
-	// skew things, if your browser supports that
-	if ($('html').hasClass('csstransforms')) {		
-		$(".media-gallery-slider").each(function() {
-			var id = $(this).attr('id');
-			$(this).children().each(function() {
-				$(this).wrap('<div class="outerShell"><div class="innerShell"></div></div>');
-			});
-			window.onresize = function(e) {
-				doSlider(id);
-			}			
-			doSlider(id);
-		});
-		
-	}
-	*/
-	
+	});
 	
 
 });
@@ -142,42 +122,6 @@ function kickViewports() {
 	}
 }
 
-
-// figure out how big the images are
-// figure out the dimensions of innerShell
-// figure out how far to space them apart
-function doSlider(slider_id) {
-
-	if (slider_id != "") slider_id = "#" + slider_id;
-
-	var cw = $("header").outerWidth();
-	var iw = 570 * 0.4;
-	var ih = iw * 1.06667;
-	var id = iw * 0.73334;
-	var ic = 0;
-	var imgh = 0;
-	var imgw = 0;
-	$(slider_id + " .innerShell").each(function() {
-		$(this).css('width', iw.toString() + "px").css('height', ih.toString() + "px");
-		ic++;
-		imgh = $("img", this).height();
-		imgw = $("img", this).width();
-	});
-	var displace = 0;
-	$(slider_id + " .outerShell").each(function() {
-		$(this).css('left', displace.toString() + "px");
-		displace += id;
-	});
-	
-	var middle = cw / 2;
-	var half = (ic * id) / 2;
-	
-	$(slider_id)
-		.addClass('slider-go')
-		.css('height', imgh.toString() + "px")
-		.css('width', (ic * id).toString() + "px")
-		.css('margin-left', ((half - middle) * -1).toString() + "px");
-}
 
 
 /*
@@ -275,11 +219,6 @@ function homeMediaSmall() {
 		$('#carousel').responsiveSlides({
 			auto: false,
 			pager: true,
-			/*
-			nav: true,
-			prevText: "&lt;",
-			nextText: "&gt;"
-			*/
 		});
 				
 	});

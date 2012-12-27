@@ -10,26 +10,6 @@
 /* Typography =================================================== */
 
 
-// FONT FACE http://www.font-face.com
-
-/*
-@font-face {
-  font-family: Gotham Book;
-  src: url(../fonts/Gotham/Gotham-Book.otf) format("opentype");
-}
-
-@font-face {
-  font-family: Gotham Rounded Medium;
-  src: url(../fonts/GothamRounded/GothamRounded-Medium.otf) format("opentype");
-}
-
-@font-face {
-  font-family: Gotham Rounded Book;
-  src: url(../fonts/GothamRounded/GothamRounded-Book.otf) format("opentype");
-}
-*/
-
-
 // HEADINGS ====================================================
 
 h1, 
@@ -152,7 +132,7 @@ sup {
 position : relative;
 .font-size(12);
 line-height : 0; 
-vertical-align : baselineheight; }
+vertical-align : @baselineheight; }
 
 sup { 
 top : -.5em; }
@@ -178,11 +158,20 @@ header {
 			text-decoration: none;
 			color: white;
 		}
-		#ident-bottom {
+		#ident-top a:hover {
+			color: black;
+		}
+		#ident-bottom,
+		#ident-bottom a {
 			font-size: 15px;
 			line-height: 16px;
-			font-family: @altfont;
+			font-family: @baseheadingfont;
 			font-weight: bold;
+			text-decoration: none;
+			color: black;
+		}
+		#ident-bottom a:hover {
+			color: @rpired;
 		}
 	}
 	
@@ -397,6 +386,7 @@ header {
 	a.call-to-action {
 		font-size: 18px;
 		line-height: 20px;
+		font-family: @basefont;
 	}
 	a:hover {
 		color: @rpigray;

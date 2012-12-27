@@ -166,6 +166,7 @@ header #ident-wrapper {
   -webkit-border-radius: 68px;
   border-radius: 68px;
   overflow: hidden;
+  z-index: 99;
 }
 header #ident-wrapper #ident-top,
 header #ident-wrapper #ident-bottom {
@@ -218,7 +219,7 @@ header #main-nav {
  * MAIN BODY STUFF
  */
 .content-container {
-  padding: 3% 6.25%;
+  padding: 3% 6.667%;
   overflow: hidden;
 }
 .content-container h1 {
@@ -229,61 +230,14 @@ header #main-nav {
   padding-top: 33px;
 }
 /*
-.rotate-go {
-   -webkit-transform: rotate(-15deg); 
-   -moz-transform: rotate(-15deg); 
-   -o-transform: rotate(-15deg);
-   transform: rotate(-15deg);
-}
-
-.skew-go {
-   -webkit-transform: skewX(-15deg); 
-   -moz-transform: skewX(-15deg); 
-   -o-transform: skewX(-15deg);
-   transform: skewX(-15deg);
-   
-   .backskew {
-	   transform: skewX(15deg);
-   }
-}
-*/
-/*
  * HOME PAGE MEDIA GALLERY SLIDER
  */
 body.home #media {
   padding: 0;
   overflow: hidden;
-  /*
-	.outerShell {
-		-webkit-transform:rotate(15deg); 
-		-moz-transform:rotate(15deg); 
-		-o-transform:rotate(15deg); 
-		transform:rotate(15deg); 
-		position:absolute;
-		top:0px;
-		
-		.innerShell {
-			position:relative;
-			overflow:hidden;
-
-			img {
-				position:inherit;
-				-webkit-transform:translate(-28px, 28px) rotate(-15deg);
-				-moz-transform:translate(-28px, 28px) rotate(-15deg);
-				-o-transform:translate(-28px, 28px) rotate(-15deg);
-				transform:translate(-28px, 28px) rotate(-15deg);
-			}
-		}
-	}
-	
-	.slider-go {
-		position: relative;
-	}
-	*/
-
 }
 body.home #media h2 {
-  padding: 33px 6.25%;
+  padding: 33px 6.667%;
 }
 body.home #media #carousel {
   padding-left: 0;
@@ -379,24 +333,6 @@ body.artgallery #main-content-container {
 }
 .content-container #gallery-container {
   margin-bottom: 6.25%;
-  /*
-	#gallery-small-photos {
-	
-		text-align: center;
-	
-		.gallery-small-photo {
-			width: 68px;
-/*			display: inline; */
-
-  /*
-			float: left;
-			margin: 0 3.125%;
-			
-			.circle-wrapper {
-			}
-		}
-	}
-	*/
 }
 .content-container #gallery-container #gallery-large-photo {
   text-align: center;
@@ -417,11 +353,13 @@ body.artgallery #main-content-container {
 footer {
   background-color: black;
   color: white;
-  padding: 6.25%;
+  padding: 6.667%;
   text-align: right;
 }
 footer .logo {
   margin: 15px 0;
+  width: 50%;
+  height: auto;
 }
 #layout {
   width: 100%;
@@ -430,22 +368,6 @@ footer .logo {
   margin: 0 auto;
 }
 /* Typography =================================================== */
-/*
-@font-face {
-  font-family: Gotham Book;
-  src: url(../fonts/Gotham/Gotham-Book.otf) format("opentype");
-}
-
-@font-face {
-  font-family: Gotham Rounded Medium;
-  src: url(../fonts/GothamRounded/GothamRounded-Medium.otf) format("opentype");
-}
-
-@font-face {
-  font-family: Gotham Rounded Book;
-  src: url(../fonts/GothamRounded/GothamRounded-Book.otf) format("opentype");
-}
-*/
 h1,
 h2,
 h3,
@@ -560,7 +482,7 @@ sup {
   font-size: 12px;
   font-size: 1.2rem;
   line-height: 0;
-  vertical-align: baselineheight;
+  vertical-align: 1.5em;
 }
 sup {
   top: -0.5em;
@@ -586,11 +508,20 @@ header #ident-wrapper #ident-top a {
   text-decoration: none;
   color: white;
 }
-header #ident-wrapper #ident-bottom {
+header #ident-wrapper #ident-top a:hover {
+  color: black;
+}
+header #ident-wrapper #ident-bottom,
+header #ident-wrapper #ident-bottom a {
   font-size: 15px;
   line-height: 16px;
-  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "proxima-nova-soft", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+header #ident-wrapper #ident-bottom a:hover {
+  color: #f7001f;
 }
 header #main-nav ul {
   margin: 0 11px 0 -11px;
@@ -765,6 +696,7 @@ header #main-nav ul ul .menu-action {
 .content-container a.call-to-action {
   font-size: 18px;
   line-height: 20px;
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .content-container a:hover {
   color: #414042;
@@ -880,17 +812,6 @@ header #main-nav ul li.active ul li.active {
 #media {
   background-color: black;
 }
-/*
-.dark-gray-section.concave {
-	background: transparent url(../images/curve_wg_concave.jpg) top left no-repeat;
-	background-size: 100%;
-}
-
-.black-section.convex {
-	background: transparent url(../images/curve_gb_convex.jpg) top left no-repeat;
-	background-size: 100%;
-}
-*/
 /*
  * MAIN BODY STUFF
  */
@@ -1398,7 +1319,8 @@ table tbody + tbody {
   header #ident-wrapper #ident-top a {
     font-size: 14px;
   }
-  header #ident-wrapper #ident-bottom {
+  header #ident-wrapper #ident-bottom,
+  header #ident-wrapper #ident-bottom a {
     font-size: 18px;
     line-height: 19px;
   }
@@ -1422,7 +1344,8 @@ table tbody + tbody {
   body.home header #ident-wrapper #ident-top a {
     font-size: 18px;
   }
-  body.home header #ident-wrapper #ident-bottom {
+  body.home header #ident-wrapper #ident-bottom,
+  body.home header #ident-wrapper #ident-bottom a {
     font-size: 38px;
     line-height: 42px;
     padding-top: 25px;
@@ -1434,12 +1357,13 @@ table tbody + tbody {
   }
   header #contact a {
     font-size: 12px;
+    font-weight: 700;
   }
   header #icons {
     float: none;
     position: absolute;
-    top: 2.5%;
-    right: 1%;
+    top: 12px;
+    right: 1.96%;
     margin: 0;
   }
   header #icons #icon-home {
@@ -1627,7 +1551,7 @@ table tbody + tbody {
   }
   #student-profile-container #student-profile-text {
     margin: 20px 0 0 11%;
-    border-left: 2px dotted #939598;
+    border-left: 3px dotted #939598;
     padding-left: 7%;
   }
   #student-profile-container #student-profile-text h4 {
@@ -1708,6 +1632,8 @@ table tbody + tbody {
     bottom: -40%;
     left: 0;
     margin: 0;
+    height: auto;
+    width: auto;
   }
   footer .legal {
     position: absolute;
@@ -1716,7 +1642,7 @@ table tbody + tbody {
   }
   footer #footer-container {
     background-color: black;
-    padding: 0 6.25%;
+    padding: 0 6.667%;
   }
   footer #footer-container #footer-text {
     position: relative;
