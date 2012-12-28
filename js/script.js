@@ -15,6 +15,8 @@ $(document).ready(function() {
 		
 		// so far this works for img and div, haven't tried anything else.
 		$('.circle').each(function() {
+		
+			var bonus_classes = "";
 
 			var h = $(this).outerHeight();
 			var w = $(this).outerWidth();			
@@ -34,8 +36,16 @@ $(document).ready(function() {
 				$(this).html(t.join("<br />"));
 			});
 			
+			// if the .circle has .small-only or .large-only, preserve that
+			if ($(this).hasClass("small-only")) {
+				bonus_classes += " small-only";
+			}
+			if ($(this).hasClass("large-only")) {
+				bonus_classes += " large-only";
+			}
+			
 			$(this).css('max-width', w.toString() + 'px').css('margin-left', '-' + offset.toString() + 'px');
-			$(this).wrap('<div class="circle-wrapper" style="' + css + '"></div>');
+			$(this).wrap('<div class="circle-wrapper' + bonus_classes + '" style="' + css + '"></div>');
 		
 		});
 
@@ -129,6 +139,9 @@ function kickViewports() {
  */
 function setUpMenuNav() {
 
+	var c_plus = "+";
+	var c_minus = "&ndash;";
+
 	$(".menu-action").remove();
 
 	$("#main-nav ul li").each(function() {
@@ -138,9 +151,9 @@ function setUpMenuNav() {
 		
 			// okay let's add some fancy blah blah blah
 			if ($(this).hasClass('active')) {
-				$(this).children('a').after('<a class="menu-action menu-open" href="#">&mdash;</a>');
+				$(this).children('a').after('<a class="menu-action menu-open" href="#">' + c_minus + '</a>');
 			} else {
-				$(this).children('a').after('<a class="menu-action" href="#">+</a>');
+				$(this).children('a').after('<a class="menu-action" href="#">' + c_plus + '</a>');
 			}
 		
 		}
@@ -151,12 +164,12 @@ function setUpMenuNav() {
 		if ($(this).hasClass("menu-open")) {
 			// currently open, close
 			$(this).siblings("ul").slideUp();
-			$(this).html("+");
+			$(this).html(c_plus);
 			$(this).removeClass("menu-open");
 		} else {
 			// currently closed, open
 			$(this).siblings("ul").slideDown();
-			$(this).html("&mdash;");
+			$(this).html(c_minus);
 			$(this).addClass("menu-open");
 		}
 	});

@@ -90,6 +90,16 @@ header #icons {
 	#icon-home {
 		display: none;
 	}
+	#icon-search {
+		height: 29px;
+		width: 30px;
+		background-image: url(../images/icon_search_large.png);
+	}
+	#icon-search:hover,
+	#icon-search:active,
+	#icon-search:focus {
+		background-position: 0 -29px;
+	}
 	
 }
 
@@ -272,7 +282,10 @@ body.artgallery #main-content-container {
 
 .content-split {
 	float: left;
-	width: 70%;
+	width: 60%;
+}
+body.artgallery .content-split {
+	width: 46.667%;	
 }
 #home-content {
 	margin-right: 33%;
@@ -411,9 +424,16 @@ body.home {
 #gallery-container {
 	clear: none;
 	float: right;
-	width: 26.5625%;
+	width: 50%;
 	margin-top: 0;
 	padding-top: 0;
+	
+	td {
+		display: table-cell;
+	}
+	td.small-only {
+		display: none;
+	}
 }
 
 
